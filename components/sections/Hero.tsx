@@ -131,7 +131,7 @@ export function Hero() {
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center justify-center px-6 pt-20 overflow-hidden"
+      className="min-h-screen flex items-center justify-center px-6 pt-20 pb-10 overflow-hidden"
     >
       <div className="container mx-auto">
         <motion.div

@@ -161,7 +161,7 @@ export function Contact() {
                 <div>
                   <label
                     htmlFor="name"
-                    className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+                    className="block text-sm font-medium text-gray-700 mb-2"
                   >
                     Name
                   </label>
@@ -172,14 +172,14 @@ export function Contact() {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:text-white transition-colors"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
                     placeholder="Your name"
                   />
                 </div>
                 <div>
                   <label
                     htmlFor="email"
-                    className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+                    className="block text-sm font-medium text-gray-700 mb-2"
                   >
                     Email
                   </label>
@@ -190,7 +190,7 @@ export function Contact() {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:text-white transition-colors"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
                     placeholder="your@email.com"
                   />
                 </div>
@@ -199,7 +199,7 @@ export function Contact() {
               <div>
                 <label
                   htmlFor="subject"
-                  className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+                  className="block text-sm font-medium text-gray-700 mb-2"
                 >
                   Subject
                 </label>
@@ -210,7 +210,7 @@ export function Contact() {
                   value={formData.subject}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:text-white transition-colors"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
                   placeholder="Project inquiry"
                 />
               </div>
@@ -218,7 +218,7 @@ export function Contact() {
               <div>
                 <label
                   htmlFor="message"
-                  className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+                  className="block text-sm font-medium text-gray-700 mb-2"
                 >
                   Message
                 </label>
@@ -229,7 +229,7 @@ export function Contact() {
                   onChange={handleChange}
                   required
                   rows={6}
-                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:text-white transition-colors resize-none"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors resize-none"
                   placeholder="Tell me about your project..."
                 />
               </div>
@@ -254,10 +254,10 @@ export function Contact() {
           {/* Contact Information */}
           <div className="space-y-8">
             <div>
-              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">
                 Get in Touch
               </h3>
-              <p className="text-gray-600 dark:text-gray-400 mb-8 leading-relaxed">
+              <p className="text-gray-600 mb-8 leading-relaxed">
                 I&apos;m always open to discussing new opportunities,
                 interesting projects, and potential collaborations. Whether you
                 have a question or just want to say hi, I&apos;ll try my best to
@@ -271,18 +271,14 @@ export function Contact() {
                 <a
                   key={index}
                   href={info.link}
-                  className="flex items-center p-4 bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group"
+                  className="flex items-center p-4 bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group"
                 >
-                  <div className="flex-shrink-0 w-12 h-12 bg-blue-100 dark:bg-blue-900 rounded-lg flex items-center justify-center text-blue-600 dark:text-blue-400 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                  <div className="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-colors">
                     {info.icon}
                   </div>
                   <div className="ml-4">
-                    <p className="font-semibold text-gray-900 dark:text-white">
-                      {info.title}
-                    </p>
-                    <p className="text-gray-600 dark:text-gray-400">
-                      {info.value}
-                    </p>
+                    <p className="font-semibold text-gray-900">{info.title}</p>
+                    <p className="text-gray-600">{info.value}</p>
                   </div>
                 </a>
               ))}
@@ -290,9 +286,7 @@ export function Contact() {
 
             {/* Social Links */}
             <div>
-              <h4 className="font-semibold text-gray-900 dark:text-white mb-4">
-                Follow Me
-              </h4>
+              <h4 className="font-semibold text-gray-900 mb-4">Follow Me</h4>
               <div className="flex space-x-4">
                 {socialLinks.map((social, index) => (
                   <a
@@ -300,7 +294,7 @@ export function Contact() {
                     href={social.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-12 h-12 bg-gray-100 dark:bg-gray-700 rounded-lg flex items-center justify-center text-gray-600 dark:text-gray-400 hover:bg-blue-600 hover:text-white transition-all duration-300 transform hover:scale-110"
+                    className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center text-gray-600 hover:bg-blue-600 hover:text-white transition-all duration-300 transform hover:scale-110"
                     title={social.name}
                   >
                     {social.icon}

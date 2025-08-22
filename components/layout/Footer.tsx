@@ -41,13 +41,13 @@ export function Footer() {
   ];
 
   return (
-    <footer className="bg-gray-900 dark:bg-black text-white py-16 px-6">
+    <footer className="bg-gray-100 text-gray-900 py-16 px-6 border-t border-gray-200">
       <div className="container mx-auto">
         <div className="grid md:grid-cols-4 gap-8 mb-12">
           {/* Brand Section */}
           <div className="md:col-span-2">
-            <h3 className="text-2xl font-bold mb-4">Collins</h3>
-            <p className="text-gray-400 mb-6 max-w-md">
+            <h3 className="text-2xl font-bold mb-4 text-gray-900">Collins</h3>
+            <p className="text-gray-600 mb-6 max-w-md">
               Frontend Developer passionate about creating exceptional digital
               experiences with modern technologies and clean, efficient code.
             </p>
@@ -58,7 +58,7 @@ export function Footer() {
                   href={social.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center text-gray-400 hover:bg-blue-600 hover:text-white transition-all duration-300 transform hover:scale-110"
+                  className="w-10 h-10 bg-white rounded-lg flex items-center justify-center text-gray-600 hover:bg-blue-600 hover:text-white transition-all duration-300 transform hover:scale-110 shadow-sm border border-gray-200"
                   title={social.name}
                 >
                   {social.icon}
@@ -69,13 +69,13 @@ export function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-semibold mb-4">Quick Links</h4>
+            <h4 className="font-semibold mb-4 text-gray-900">Quick Links</h4>
             <nav className="space-y-2">
               {quickLinks.map((link, index) => (
                 <a
                   key={index}
                   href={link.href}
-                  className="block text-gray-400 hover:text-white transition-colors"
+                  className="block text-gray-600 hover:text-blue-600 transition-colors"
                 >
                   {link.label}
                 </a>
@@ -85,8 +85,8 @@ export function Footer() {
 
           {/* Contact Info */}
           <div>
-            <h4 className="font-semibold mb-4">Get in Touch</h4>
-            <div className="space-y-2 text-gray-400">
+            <h4 className="font-semibold mb-4 text-gray-900">Get in Touch</h4>
+            <div className="space-y-2 text-gray-600">
               <p>collins@example.com</p>
               <p>+1 (555) 123-4567</p>
               <p>San Francisco, CA</p>
@@ -95,21 +95,21 @@ export function Footer() {
         </div>
 
         {/* Bottom Section */}
-        <div className="border-t border-gray-800 pt-8">
+        <div className="border-t border-gray-200 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-gray-400 text-sm">
+            <p className="text-gray-500 text-sm">
               © {currentYear} Collins. All rights reserved.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <a
                 href="/privacy"
-                className="text-gray-400 hover:text-white text-sm transition-colors"
+                className="text-gray-500 hover:text-blue-600 text-sm transition-colors"
               >
                 Privacy Policy
               </a>
               <a
                 href="/terms"
-                className="text-gray-400 hover:text-white text-sm transition-colors"
+                className="text-gray-500 hover:text-blue-600 text-sm transition-colors"
               >
                 Terms of Service
               </a>

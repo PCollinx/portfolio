@@ -78,6 +78,36 @@ export function Navigation() {
     },
   };
 
+  const mobileBackdropVariants = {
+    closed: {
+      opacity: 0,
+      transition: {
+        duration: 0.2,
+      },
+    },
+    open: {
+      opacity: 1,
+      transition: {
+        duration: 0.2,
+      },
+    },
+  };
+
+  const mobileLinkVariants = {
+    closed: {
+      x: -20,
+      opacity: 0,
+    },
+    open: (index: number) => ({
+      x: 0,
+      opacity: 1,
+      transition: {
+        delay: index * 0.1,
+        duration: 0.3,
+      },
+    }),
+  };
+
   return (
     <motion.nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -131,17 +161,19 @@ export function Navigation() {
           <div className="flex items-center space-x-4">
             {/* Mobile Menu Button */}
             <motion.button
-              className="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors"
+              className="md:hidden p-3 rounded-xl hover:bg-gray-100 active:bg-gray-200 transition-colors relative z-10"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
+              aria-expanded={isMobileMenuOpen}
             >
               <motion.div
                 animate={isMobileMenuOpen ? "open" : "closed"}
                 className="w-6 h-6 flex flex-col justify-center items-center"
               >
                 <motion.span
-                  className="w-6 h-0.5 bg-gray-700 block"
+                  className="w-6 h-0.5 bg-gray-700 block rounded-full"
                   variants={{
                     closed: { rotate: 0, y: 0 },
                     open: { rotate: 45, y: 6 },
@@ -149,7 +181,7 @@ export function Navigation() {
                   transition={{ duration: 0.3 }}
                 />
                 <motion.span
-                  className="w-6 h-0.5 bg-gray-700 block mt-1.5"
+                  className="w-6 h-0.5 bg-gray-700 block mt-1.5 rounded-full"
                   variants={{
                     closed: { opacity: 1 },
                     open: { opacity: 0 },
@@ -157,7 +189,7 @@ export function Navigation() {
                   transition={{ duration: 0.3 }}
                 />
                 <motion.span
-                  className="w-6 h-0.5 bg-gray-700 block mt-1.5"
+                  className="w-6 h-0.5 bg-gray-700 block mt-1.5 rounded-full"
                   variants={{
                     closed: { rotate: 0, y: 0 },
                     open: { rotate: -45, y: -6 },
@@ -172,40 +204,73 @@ export function Navigation() {
         {/* Mobile Menu */}
         <AnimatePresence>
           {isMobileMenuOpen && (
-            <motion.div
-              className="md:hidden"
-              variants={mobileMenuVariants}
-              initial="closed"
-              animate="open"
-              exit="closed"
-              style={{ overflow: "hidden" }}
-            >
-              <div className="pt-4 pb-2 space-y-2">
-                {navItems.map((item, index) => (
-                  <motion.div
-                    key={item.href}
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{
-                      opacity: 1,
-                      x: 0,
-                      transition: {
-                        delay: index * 0.1,
-                        duration: 0.3,
-                      },
-                    }}
-                    exit={{ opacity: 0, x: -20 }}
-                  >
-                    <Link
-                      href={item.href}
-                      className="block py-2 px-4 text-gray-700 hover:text-blue-600 hover:bg-gray-100 rounded-lg transition-colors"
-                      onClick={() => setIsMobileMenuOpen(false)}
+            <>
+              {/* Mobile Backdrop */}
+              <motion.div
+                className="fixed inset-0 bg-black/20 backdrop-blur-sm md:hidden"
+                variants={mobileBackdropVariants}
+                initial="closed"
+                animate="open"
+                exit="closed"
+                onClick={() => setIsMobileMenuOpen(false)}
+                style={{ top: 0, zIndex: -1 }}
+              />
+              
+              {/* Mobile Menu Content */}
+              <motion.div
+                className="md:hidden absolute left-0 right-0 top-full bg-white/95 backdrop-blur-md border-b border-gray-200/50 shadow-lg"
+                variants={mobileMenuVariants}
+                initial="closed"
+                animate="open"
+                exit="closed"
+                style={{ overflow: "hidden" }}
+              >
+                <div className="container mx-auto px-6">
+                  <div className="py-6 space-y-1">
+                    {navItems.map((item, index) => (
+                      <motion.div
+                        key={item.href}
+                        variants={mobileLinkVariants}
+                        initial="closed"
+                        animate="open"
+                        exit="closed"
+                        custom={index}
+                      >
+                        <Link
+                          href={item.href}
+                          className="block py-3 px-4 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-xl transition-all duration-200 font-medium text-lg group"
+                          onClick={() => setIsMobileMenuOpen(false)}
+                        >
+                          <div className="flex items-center justify-between">
+                            <span>{item.label}</span>
+                            <motion.div
+                              className="w-0 group-hover:w-2 h-2 bg-blue-600 rounded-full transition-all duration-200"
+                              whileHover={{ scale: 1.2 }}
+                            />
+                          </div>
+                        </Link>
+                      </motion.div>
+                    ))}
+                    
+                    {/* Mobile CTA Section */}
+                    <motion.div
+                      className="pt-4 mt-4 border-t border-gray-200"
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: 0.4, duration: 0.3 }}
                     >
-                      {item.label}
-                    </Link>
-                  </motion.div>
-                ))}
-              </div>
-            </motion.div>
+                      <Link
+                        href="#contact"
+                        className="block w-full py-3 px-4 bg-blue-600 hover:bg-blue-700 text-white text-center font-semibold rounded-xl transition-colors duration-200"
+                        onClick={() => setIsMobileMenuOpen(false)}
+                      >
+                        Get In Touch
+                      </Link>
+                    </motion.div>
+                  </div>
+                </div>
+              </motion.div>
+            </>
           )}
         </AnimatePresence>
       </div>

@@ -251,51 +251,53 @@ export function Skills() {
         </motion.div>
 
         <motion.div
-          className="mt-16 text-center"
+          className="mt-16 text-center px-4"
           variants={badgeVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
         >
           <motion.div
-            className="inline-flex items-center space-x-2 bg-gray-50 rounded-full px-6 py-3 shadow-lg border border-gray-100"
+            className="inline-block bg-gray-50 rounded-full px-3 sm:px-6 py-3 shadow-lg border border-gray-100 max-w-full"
             whileHover={{
               scale: 1.05,
               boxShadow: "0 20px 40px rgba(0, 0, 0, 0.1)",
             }}
             transition={{ duration: 0.3 }}
           >
-            <span className="text-gray-600">
-              Always learning:
-            </span>
-            <div className="flex space-x-2">
-              {["Three.js", "WebGL", "GraphQL"].map((tech, index) => (
-                <motion.span
-                  key={tech}
-                  className={`px-3 py-1 rounded-full text-sm font-medium ${
-                    index === 0
-                      ? "bg-blue-100 text-blue-800"
-                      : index === 1
-                      ? "bg-green-100 text-green-800"
-                      : "bg-purple-100 text-purple-800"
-                  }`}
-                  initial={{ scale: 0, opacity: 0 }}
-                  whileInView={{ scale: 1, opacity: 1 }}
-                  transition={{
-                    delay: 2.5 + index * 0.2,
-                    duration: 0.3,
-                    type: "spring",
-                    stiffness: 200,
-                  }}
-                  whileHover={{
-                    scale: 1.1,
-                    y: -2,
-                  }}
-                  viewport={{ once: true }}
-                >
-                  {tech}
-                </motion.span>
-              ))}
+            <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-2">
+              <span className="text-gray-600 text-sm sm:text-base whitespace-nowrap">
+                Always learning:
+              </span>
+              <div className="flex flex-wrap justify-center gap-1 sm:gap-2">
+                {["Three.js", "WebGL", "GraphQL"].map((tech, index) => (
+                  <motion.span
+                    key={tech}
+                    className={`px-2 sm:px-3 py-1 rounded-full text-xs sm:text-sm font-medium ${
+                      index === 0
+                        ? "bg-blue-100 text-blue-800"
+                        : index === 1
+                        ? "bg-green-100 text-green-800"
+                        : "bg-purple-100 text-purple-800"
+                    }`}
+                    initial={{ scale: 0, opacity: 0 }}
+                    whileInView={{ scale: 1, opacity: 1 }}
+                    transition={{
+                      delay: 2.5 + index * 0.2,
+                      duration: 0.3,
+                      type: "spring",
+                      stiffness: 200,
+                    }}
+                    whileHover={{
+                      scale: 1.1,
+                      y: -2,
+                    }}
+                    viewport={{ once: true }}
+                  >
+                    {tech}
+                  </motion.span>
+                ))}
+              </div>
             </div>
           </motion.div>
         </motion.div>
