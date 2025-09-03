@@ -6,37 +6,22 @@ export function Experience() {
   const experiences = [
     {
       id: 1,
-      title: "Senior Frontend Developer",
-      company: "Tech Solutions Inc.",
-      period: "2023 - Present",
+      title: "Frontend Developer",
+      company: "Mokohost.",
+      period: "2024 - Present",
       description:
-        "Leading frontend development for multiple client projects, mentoring junior developers, and implementing modern development practices.",
+        "Leading frontend development for multiple client projects, and implementing modern development practices.",
       achievements: [
         "Improved application performance by 40% through code optimization",
-        "Led migration from JavaScript to TypeScript across 5 major projects",
-        "Mentored 3 junior developers and conducted code reviews",
+        "Led migration from JavaScript to TypeScript across 3 major projects",
       ],
       tech: ["React", "Next.js", "TypeScript", "Tailwind CSS"],
     },
     {
       id: 2,
-      title: "Frontend Developer",
-      company: "Digital Innovations Ltd.",
-      period: "2022 - 2023",
-      description:
-        "Developed responsive web applications and collaborated with design teams to create pixel-perfect implementations.",
-      achievements: [
-        "Built 10+ responsive web applications from scratch",
-        "Collaborated with UX/UI designers to improve user experience",
-        "Implemented automated testing reducing bugs by 30%",
-      ],
-      tech: ["React", "Vue.js", "JavaScript", "SCSS"],
-    },
-    {
-      id: 3,
       title: "Junior Frontend Developer",
       company: "StartUp Ventures",
-      period: "2021 - 2022",
+      period: "2023 - 2024",
       description:
         "Started my professional journey focusing on learning modern web technologies and building user interfaces.",
       achievements: [
@@ -47,10 +32,10 @@ export function Experience() {
       tech: ["JavaScript", "React", "CSS3", "Git"],
     },
     {
-      id: 4,
+      id: 3,
       title: "Freelance Web Developer",
       company: "Self-Employed",
-      period: "2020 - 2021",
+      period: "2021 - 2023",
       description:
         "Built websites for local businesses while learning web development fundamentals.",
       achievements: [
@@ -59,27 +44,6 @@ export function Experience() {
         "Built first React applications",
       ],
       tech: ["HTML", "CSS", "JavaScript", "WordPress"],
-    },
-  ];
-
-  const certifications = [
-    {
-      name: "React Developer Certification",
-      issuer: "Meta",
-      year: "2023",
-      icon: "🏆",
-    },
-    {
-      name: "AWS Cloud Practitioner",
-      issuer: "Amazon Web Services",
-      year: "2023",
-      icon: "☁️",
-    },
-    {
-      name: "TypeScript Certification",
-      issuer: "Microsoft",
-      year: "2022",
-      icon: "📘",
     },
   ];
 
@@ -174,10 +138,10 @@ export function Experience() {
                   className="absolute left-6 w-4 h-4 bg-blue-600 rounded-full border-4 border-white shadow-lg z-10"
                   initial={{ scale: 0 }}
                   whileInView={{ scale: 1 }}
-                  transition={{ 
+                  transition={{
                     delay: index * 0.2 + 0.7,
                     type: "spring",
-                    stiffness: 200
+                    stiffness: 200,
                   }}
                   viewport={{ once: true }}
                   whileHover={{ scale: 1.2 }}
@@ -217,9 +181,9 @@ export function Experience() {
                           className="flex items-start text-gray-600"
                           initial={{ opacity: 0, x: -20 }}
                           whileInView={{ opacity: 1, x: 0 }}
-                          transition={{ 
+                          transition={{
                             delay: index * 0.1 + achievementIndex * 0.1 + 1,
-                            duration: 0.4
+                            duration: 0.4,
                           }}
                           viewport={{ once: true }}
                         >
@@ -237,10 +201,10 @@ export function Experience() {
                         className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium"
                         initial={{ scale: 0 }}
                         whileInView={{ scale: 1 }}
-                        transition={{ 
+                        transition={{
                           delay: index * 0.1 + techIndex * 0.05 + 1.5,
                           type: "spring",
-                          stiffness: 200
+                          stiffness: 200,
                         }}
                         whileHover={{ scale: 1.1 }}
                         viewport={{ once: true }}
@@ -252,49 +216,6 @@ export function Experience() {
                 </motion.div>
               </motion.div>
             ))}
-          </motion.div>
-
-          {/* Certifications */}
-          <motion.div
-            className="mt-20"
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
-            viewport={{ once: true }}
-          >
-            <h3 className="text-2xl font-bold text-gray-900 text-center mb-8">
-              Certifications & Achievements
-            </h3>
-            <div className="grid md:grid-cols-3 gap-6">
-              {certifications.map((cert, index) => (
-                <motion.div
-                  key={index}
-                  className="bg-white rounded-xl p-6 text-center shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ delay: index * 0.1 + 0.5, duration: 0.6 }}
-                  whileHover={{ y: -5, scale: 1.02 }}
-                  viewport={{ once: true }}
-                >
-                  <motion.div
-                    className="text-4xl mb-4"
-                    whileHover={{ rotate: [0, -10, 10, 0], scale: 1.2 }}
-                    transition={{ duration: 0.5 }}
-                  >
-                    {cert.icon}
-                  </motion.div>
-                  <h4 className="font-bold text-gray-900 mb-2">
-                    {cert.name}
-                  </h4>
-                  <p className="text-gray-600 mb-1 font-medium">
-                    {cert.issuer}
-                  </p>
-                  <p className="text-sm text-gray-500">
-                    {cert.year}
-                  </p>
-                </motion.div>
-              ))}
-            </div>
           </motion.div>
         </div>
       </div>
