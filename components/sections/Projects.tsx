@@ -1,11 +1,8 @@
 "use client";
 
-import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 export function Projects() {
-  const [activeFilter, setActiveFilter] = useState("all");
-
   const projects = [
     {
       id: 1,
@@ -81,20 +78,6 @@ export function Projects() {
     },
   ];
 
-  const filters = [
-    { key: "all", label: "All Projects" },
-    { key: "featured", label: "Featured" },
-    { key: "fullstack", label: "Full Stack" },
-    { key: "frontend", label: "Frontend" },
-    { key: "mobile", label: "Mobile" },
-  ];
-
-  const filteredProjects = projects.filter((project) => {
-    if (activeFilter === "all") return true;
-    if (activeFilter === "featured") return project.featured;
-    return project.category === activeFilter;
-  });
-
   const projectVariants = {
     hidden: {
       y: 50,
@@ -157,38 +140,10 @@ export function Projects() {
           </motion.p>
         </motion.div>
 
-        {/* Filter Buttons */}
-        <motion.div
-          className="flex flex-wrap justify-center gap-4 mb-12"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          viewport={{ once: true }}
-        >
-          {filters.map((filter, index) => (
-            <motion.button
-              key={filter.key}
-              onClick={() => setActiveFilter(filter.key)}
-              className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${
-                activeFilter === filter.key
-                  ? "bg-blue-600 text-white shadow-lg"
-                  : "bg-gray-100 text-gray-700 hover:bg-gray-200"
-              }`}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.1 + 0.5 }}
-            >
-              {filter.label}
-            </motion.button>
-          ))}
-        </motion.div>
-
         {/* Projects Grid */}
         <motion.div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8" layout>
           <AnimatePresence>
-            {filteredProjects.map((project, index) => (
+            {projects.map((project, index) => (
               <motion.div
                 key={project.id}
                 className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300"
@@ -341,7 +296,7 @@ export function Projects() {
             Want to see more of my work?
           </motion.p>
           <motion.a
-            href="https://github.com"
+            href="https://github.com/PCollinx"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center px-8 py-4 bg-gray-900 text-white font-semibold rounded-lg hover:bg-gray-800 transition-colors"

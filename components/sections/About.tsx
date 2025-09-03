@@ -73,7 +73,8 @@ export function About() {
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
             >
-              Passionate about creating exceptional digital experiences that make a difference
+              Passionate about creating exceptional digital experiences that
+              make a difference
             </motion.p>
           </motion.div>
 
@@ -100,10 +101,11 @@ export function About() {
                 className="text-lg text-gray-600 leading-relaxed"
                 variants={itemVariants}
               >
-                My journey in web development started with curiosity and has
-                evolved into a deep passion for building applications that make
-                a difference. I believe in writing code that is not only
-                functional but also maintainable and scalable.
+                As an adaptable and versatile team player, my journey in web
+                development started with curiosity and has evolved into a deep
+                passion for building applications that make a difference. I
+                believe in writing code that is not only functional but also
+                maintainable and scalable.
               </motion.p>
 
               <motion.div className="space-y-4" variants={itemVariants}>
@@ -135,9 +137,7 @@ export function About() {
                         }}
                         viewport={{ once: true }}
                       />
-                      <span className="text-gray-700">
-                        {skill}
-                      </span>
+                      <span className="text-gray-700">{skill}</span>
                     </motion.div>
                   ))}
                 </div>
@@ -165,25 +165,21 @@ export function About() {
               <div className="space-y-4">
                 {[
                   { label: "Experience", value: "3+ Years" },
-                  { label: "Projects Completed", value: "50+" },
+                  { label: "Projects Completed", value: "40+" },
                   { label: "Technologies", value: "20+" },
                   { label: "Coffee Cups", value: "∞" },
                 ].map((stat, index) => (
                   <motion.div
                     key={stat.label}
                     className={`flex justify-between items-center py-3 ${
-                      index < 3
-                        ? "border-b border-gray-200"
-                        : ""
+                      index < 3 ? "border-b border-gray-200" : ""
                     }`}
                     initial={{ opacity: 0, x: 20 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ delay: index * 0.1 + 1.1 }}
                     viewport={{ once: true }}
                   >
-                    <span className="text-gray-600">
-                      {stat.label}
-                    </span>
+                    <span className="text-gray-600">{stat.label}</span>
                     <motion.span
                       className="font-semibold text-gray-900 text-lg"
                       initial={{ scale: 0 }}

@@ -133,11 +133,7 @@ export function Skills() {
   };
 
   return (
-    <section
-      id="skills"
-      className="py-20 px-6 bg-white"
-      ref={ref}
-    >
+    <section id="skills" className="py-20 px-6 bg-white" ref={ref}>
       <div className="container mx-auto">
         <motion.div
           className="text-center mb-16"
