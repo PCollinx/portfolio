@@ -1,240 +1,108 @@
 @import "tailwindcss";
 
+/* Simple theme system - same logic everywhere */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8fafc;
+  --text-primary: #0f172a;
+  --text-secondary: #64748b;
+  --border-primary: #e2e8f0;
 }
 
+.dark {
+  --bg-primary: #0f172a;
+  --bg-secondary: #1e293b;
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --border-primary: #475569;
+}
+
+/* Apply theme consistently everywhere */
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: var(--font-geist-sans), system-ui, sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+/* All text follows theme - exclude gradient text */
+.text-gray-700:not(.text-transparent), .text-gray-900:not(.text-transparent), .text-gray-300:not(.text-transparent) {
+  color: var(--text-primary) !important;
+}
+
+.text-gray-600:not(.text-transparent), .text-gray-500:not(.text-transparent), .text-gray-400:not(.text-transparent) {
+  color: var(--text-secondary) !important;
+}
+
+/* Navigation - comprehensive fix for all elements */
+nav, nav *, nav a, nav button, nav span, nav div {
+  color: var(--text-primary) !important;
+}
+
+/* All backgrounds follow theme - exclude gradients */
+.bg-white:not([class*="bg-gradient"]), .bg-gray-50:not([class*="bg-gradient"]), .bg-gray-100:not([class*="bg-gradient"]) {
+  background-color: var(--bg-primary) !important;
+}
+
+.bg-gray-800:not([class*="bg-gradient"]), .bg-gray-900:not([class*="bg-gradient"]) {
+  background-color: var(--bg-secondary) !important;
+}
+
+/* Navigation backgrounds with transparency */
+[class*="bg-white/"], [class*="bg-gray-900/"] {
+  background-color: var(--bg-primary) !important;
+  opacity: 0.9;
+}
+
+/* Button text - blue buttons stay white, outline buttons follow theme */
+.bg-blue-600, .bg-blue-700 {
+  color: white !important;
+}
+
+/* Button gradients stay white, but exclude text gradients */
+button.bg-gradient-to-r, a.bg-gradient-to-r {
+  color: white !important;
+}
+
+.bg-blue-600 *, .bg-blue-700 * {
+  color: white !important;
+}
+
+/* Button gradients children stay white, but exclude text gradients */
+button.bg-gradient-to-r *, a.bg-gradient-to-r * {
+  color: white !important;
+}
+
+/* Border buttons follow theme */
+.border-gray-300, .border-gray-600 {
+  color: var(--text-primary) !important;
+  border-color: var(--border-primary) !important;
+}
+
+/* Mobile bottom navigation */
+.fixed[class*="bottom-"] button {
+  color: var(--text-secondary) !important;
+}
+
+.fixed[class*="bottom-"] .text-blue-600 {
+  color: #3b82f6 !important;
+}
+
+/* Mobile menu icon - ensure visibility */
+nav button span.bg-gray-900 {
+  background-color: #111827 !important;
+}
+
+.dark nav button span.bg-gray-900 {
+  background-color: #d1d5db !important;
+}
+
+/* Form inputs */
+input, textarea, select {
+  background-color: var(--bg-primary) !important;
+  color: var(--text-primary) !important;
+  border-color: var(--border-primary) !important;
 }
 
 /* Smooth scrolling */
 html {
   scroll-behavior: smooth;
-}
-
-/* Custom animations */
-@keyframes fade-in-up {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes fade-in-down {
-  from {
-    opacity: 0;
-    transform: translateY(-30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes fade-in {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes slide-in-left {
-  from {
-    opacity: 0;
-    transform: translateX(-50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes slide-in-right {
-  from {
-    opacity: 0;
-    transform: translateX(50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes scale-in {
-  from {
-    opacity: 0;
-    transform: scale(0.8);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-@keyframes bounce-in {
-  0% {
-    opacity: 0;
-    transform: scale(0.3);
-  }
-  50% {
-    opacity: 1;
-    transform: scale(1.05);
-  }
-  70% {
-    transform: scale(0.9);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-@keyframes float {
-  0%,
-  100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-}
-
-@keyframes pulse-glow {
-  0%,
-  100% {
-    box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
-  }
-  50% {
-    box-shadow: 0 0 30px rgba(59, 130, 246, 0.6);
-  }
-}
-
-.animate-fade-in-up {
-  animation: fade-in-up 0.6s ease-out;
-}
-
-.animate-fade-in-down {
-  animation: fade-in-down 0.6s ease-out;
-}
-
-.animate-fade-in {
-  animation: fade-in 0.6s ease-out;
-}
-
-.animate-slide-in-left {
-  animation: slide-in-left 0.6s ease-out;
-}
-
-.animate-slide-in-right {
-  animation: slide-in-right 0.6s ease-out;
-}
-
-.animate-scale-in {
-  animation: scale-in 0.5s ease-out;
-}
-
-.animate-bounce-in {
-  animation: bounce-in 0.6s ease-out;
-}
-
-.animate-float {
-  animation: float 3s ease-in-out infinite;
-}
-
-.animate-pulse-glow {
-  animation: pulse-glow 2s ease-in-out infinite;
-}
-
-/* Staggered animations */
-.stagger-1 {
-  animation-delay: 0.1s;
-}
-.stagger-2 {
-  animation-delay: 0.2s;
-}
-.stagger-3 {
-  animation-delay: 0.3s;
-}
-.stagger-4 {
-  animation-delay: 0.4s;
-}
-.stagger-5 {
-  animation-delay: 0.5s;
-}
-.stagger-6 {
-  animation-delay: 0.6s;
-}
-
-/* Custom line-clamp utility */
-.line-clamp-3 {
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 3;
-  line-clamp: 3;
-}
-
-/* Custom gradient text animation */
-@keyframes gradient-shift {
-  0%,
-  100% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-}
-
-.animate-gradient {
-  background-size: 200% 200%;
-  animation: gradient-shift 3s ease infinite;
-}
-
-/* Loading spinner */
-@keyframes spin {
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-.animate-spin {
-  animation: spin 1s linear infinite;
-}
-
-/* Hover effects */
-.hover-lift {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.hover-lift:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-}
-
-/* Custom scrollbar */
-::-webkit-scrollbar {
-  width: 8px;
-}
-
-::-webkit-scrollbar-track {
-  background: #f1f5f9;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #cbd5e1;
-  border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #94a3b8;
 }

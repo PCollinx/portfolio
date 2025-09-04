@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { ToastProvider } from "@/components/ui/ToastProvider";
+import { ThemeProvider } from "@/components/ui/ThemeProvider";
 import { MobileBottomNav } from "@/components/layout/MobileBottomNav";
 import "./globals.css";
 
@@ -58,14 +59,31 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="scroll-smooth" suppressHydrationWarning>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              try {
+                const savedTheme = localStorage.getItem('theme');
+                const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+                const theme = savedTheme || systemTheme;
+                document.documentElement.classList.remove('light', 'dark');
+                document.documentElement.classList.add(theme);
+              } catch (e) {}
+            `,
+          }}
+        />
+      </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white dark:bg-gray-900 text-gray-900 dark:text-white transition-colors duration-300`}
       >
-        <ToastProvider>
-          {children}
-          <MobileBottomNav />
-        </ToastProvider>
+        <ThemeProvider>
+          <ToastProvider>
+            {children}
+            <MobileBottomNav />
+          </ToastProvider>
+        </ThemeProvider>
       </body>
     </html>
   );

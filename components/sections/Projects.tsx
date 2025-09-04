@@ -104,7 +104,7 @@ export function Projects() {
   };
 
   return (
-    <section id="projects" className="py-20 px-6 bg-gray-50">
+    <section id="projects" className="py-20 px-6 bg-gray-50 dark:bg-gray-900">
       <div className="container mx-auto">
         <motion.div
           className="text-center mb-16"
@@ -114,7 +114,7 @@ export function Projects() {
           viewport={{ once: true }}
         >
           <motion.h2
-            className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4"
+            className="text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4"
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6 }}
@@ -130,7 +130,7 @@ export function Projects() {
             viewport={{ once: true }}
           />
           <motion.p
-            className="text-xl text-gray-600 max-w-2xl mx-auto"
+            className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -146,7 +146,7 @@ export function Projects() {
             {projects.map((project, index) => (
               <motion.div
                 key={project.id}
-                className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300"
+                className="group bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300"
                 variants={projectVariants}
                 initial="hidden"
                 animate="visible"
@@ -184,7 +184,7 @@ export function Projects() {
                 {/* Project Content */}
                 <div className="p-6">
                   <motion.h3
-                    className="text-xl font-bold text-gray-900 mb-2"
+                    className="text-xl font-bold text-gray-900 dark:text-white mb-2"
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: index * 0.1 }}
@@ -192,7 +192,7 @@ export function Projects() {
                     {project.title}
                   </motion.h3>
                   <motion.p
-                    className="text-gray-600 mb-4 line-clamp-3"
+                    className="text-gray-600 dark:text-gray-400 mb-4 line-clamp-3"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ delay: index * 0.1 + 0.2 }}
@@ -210,7 +210,7 @@ export function Projects() {
                     {project.tech.map((tech, techIndex) => (
                       <motion.span
                         key={tech}
-                        className="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm font-medium"
+                        className="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-full text-sm font-medium"
                         initial={{ scale: 0 }}
                         animate={{ scale: 1 }}
                         transition={{
@@ -235,7 +235,7 @@ export function Projects() {
                       href={project.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center space-x-2 text-gray-600 hover:text-blue-600 transition-colors"
+                      className="flex items-center space-x-2 text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
                       whileHover={{ scale: 1.05, x: 5 }}
                       whileTap={{ scale: 0.95 }}
                     >
@@ -252,7 +252,7 @@ export function Projects() {
                       href={project.demo}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center space-x-2 text-gray-600 hover:text-blue-600 transition-colors"
+                      className="flex items-center space-x-2 text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
                       whileHover={{ scale: 1.05, x: 5 }}
                       whileTap={{ scale: 0.95 }}
                     >
@@ -287,7 +287,7 @@ export function Projects() {
           viewport={{ once: true }}
         >
           <motion.p
-            className="text-gray-600 mb-6"
+            className="text-gray-600 dark:text-gray-400 mb-6"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ delay: 0.7 }}

@@ -168,9 +168,9 @@ export function Hero() {
   if (!mounted) return null;
 
   return (
-    <section
+        <section
       id="home"
-      className="min-h-screen flex items-center justify-center px-6 pt-20 pb-10 overflow-hidden"
+      className="min-h-screen flex items-center justify-center px-6 pt-20 bg-white dark:bg-gray-900 relative overflow-hidden"
     >
       <div className="container mx-auto">
         <motion.div
@@ -182,7 +182,7 @@ export function Hero() {
           <div className="space-y-8">
             <div className="space-y-4">
               <motion.h1
-                className="text-5xl lg:text-7xl font-bold text-gray-900 leading-tight"
+                className="text-5xl lg:text-7xl font-bold text-gray-900 dark:text-white leading-tight"
                 variants={itemVariants}
               >
                 Hi, I&apos;m{" "}
@@ -204,7 +204,7 @@ export function Hero() {
                 </motion.span>
               </motion.h1>
 
-              <div className="text-2xl lg:text-3xl text-gray-600 h-12 flex items-center">
+              <div className="text-2xl lg:text-3xl text-gray-600 dark:text-gray-400 h-12 flex items-center">
                 <span className="font-mono">
                   {displayedText}
                   <motion.span
@@ -217,7 +217,7 @@ export function Hero() {
             </div>
 
             <motion.p
-              className="text-lg text-gray-600 max-w-2xl leading-relaxed"
+              className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl leading-relaxed"
               variants={itemVariants}
             >
               I craft exceptional digital experiences with modern technologies.
@@ -231,7 +231,7 @@ export function Hero() {
             >
               <motion.a
                 href="#projects"
-                className="inline-flex items-center justify-center px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-all duration-300 shadow-lg"
+                className="inline-flex items-center justify-center px-8 py-4 bg-blue-600 hover:bg-blue-700 dark:bg-blue-600 dark:hover:bg-blue-700 text-white font-semibold rounded-lg transition-all duration-300 shadow-lg"
                 variants={buttonVariants}
                 whileHover="hover"
                 whileTap="tap"
@@ -256,7 +256,7 @@ export function Hero() {
 
               <motion.a
                 href="#contact"
-                className="inline-flex items-center justify-center px-8 py-4 border-2 border-gray-300 text-gray-700 font-semibold rounded-lg hover:border-blue-600 hover:text-blue-600 transition-all duration-300"
+                className="inline-flex items-center justify-center px-8 py-4 border-2 border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 font-semibold rounded-lg hover:border-blue-600 dark:hover:border-blue-400 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-300"
                 variants={buttonVariants}
                 whileHover={{
                   scale: 1.05,
@@ -292,7 +292,7 @@ export function Hero() {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-600 hover:text-blue-600 transition-colors"
+                  className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
                   whileHover={{ scale: 1.2, y: -2 }}
                   whileTap={{ scale: 0.9 }}
                 >
@@ -330,7 +330,7 @@ export function Hero() {
                 </div>
               </motion.div>
               <motion.div
-                className="absolute -bottom-4 -right-4 w-20 h-20 bg-blue-600 rounded-full flex items-center justify-center shadow-lg"
+                className="absolute -bottom-4 -right-4 w-20 h-20 bg-blue-600 dark:bg-blue-600 rounded-full flex items-center justify-center shadow-lg"
                 variants={floatingIconVariants}
                 animate="animate"
                 whileHover={{ scale: 1.1 }}

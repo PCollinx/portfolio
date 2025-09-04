@@ -133,7 +133,11 @@ export function Skills() {
   };
 
   return (
-    <section id="skills" className="py-20 px-6 bg-white" ref={ref}>
+    <section
+      id="skills"
+      className="py-20 px-6 bg-white dark:bg-gray-900"
+      ref={ref}
+    >
       <div className="container mx-auto">
         <motion.div
           className="text-center mb-16"
@@ -143,7 +147,7 @@ export function Skills() {
           viewport={{ once: true }}
         >
           <motion.h2
-            className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4"
+            className="text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4"
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6 }}
@@ -159,7 +163,7 @@ export function Skills() {
             viewport={{ once: true }}
           />
           <motion.p
-            className="text-xl text-gray-600 max-w-2xl mx-auto"
+            className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -179,7 +183,7 @@ export function Skills() {
           {skillCategories.map((category, categoryIndex) => (
             <motion.div
               key={category.title}
-              className="bg-gray-50 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-100"
+              className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-100 dark:border-gray-700"
               variants={cardVariants}
               whileHover={{
                 y: -5,
@@ -187,7 +191,7 @@ export function Skills() {
               }}
             >
               <motion.h3
-                className="text-2xl font-bold text-gray-900 mb-6"
+                className="text-2xl font-bold text-gray-900 dark:text-white mb-6"
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: categoryIndex * 0.1 }}
@@ -215,12 +219,12 @@ export function Skills() {
                         >
                           {skill.icon}
                         </motion.span>
-                        <span className="font-medium text-gray-900">
+                        <span className="font-medium text-gray-900 dark:text-white">
                           {skill.name}
                         </span>
                       </div>
                       <motion.span
-                        className="text-sm font-medium text-gray-500"
+                        className="text-sm font-medium text-gray-500 dark:text-gray-400"
                         initial={{ opacity: 0 }}
                         whileInView={{ opacity: 1 }}
                         transition={{ delay: skillIndex * 0.1 + 1 }}
@@ -262,7 +266,7 @@ export function Skills() {
             transition={{ duration: 0.3 }}
           >
             <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-2">
-              <span className="text-gray-600 text-sm sm:text-base whitespace-nowrap">
+              <span className="text-gray-600 dark:text-gray-400 text-sm sm:text-base whitespace-nowrap">
                 Always learning:
               </span>
               <div className="flex flex-wrap justify-center gap-1 sm:gap-2">

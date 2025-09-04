@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
+import { ThemeToggle } from "@/components/ui/ThemeToggle";
 
 export function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -112,7 +113,7 @@ export function Navigation() {
     <motion.nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? "bg-white/80 backdrop-blur-md border-b border-gray-200/20"
+          ? "bg-white/80 dark:bg-gray-900/80 backdrop-blur-md border-b border-gray-200/20 dark:border-gray-700/20"
           : "bg-transparent"
       }`}
       variants={navVariants}
@@ -124,7 +125,7 @@ export function Navigation() {
           <motion.div variants={logoVariants} whileHover="hover">
             <Link
               href="#home"
-              className="text-2xl font-bold text-gray-900 hover:text-blue-600 transition-colors"
+              className="text-2xl font-bold text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
             >
               Collins
             </Link>
@@ -149,19 +150,22 @@ export function Navigation() {
               >
                 <Link
                   href={item.href}
-                  className="text-gray-700 hover:text-blue-600 transition-colors font-medium relative group"
+                  className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-medium relative group"
                 >
                   {item.label}
-                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 dark:bg-blue-400 transition-all duration-300 group-hover:w-full"></span>
                 </Link>
               </motion.div>
             ))}
           </div>
 
           <div className="flex items-center space-x-4">
+            {/* Theme Toggle */}
+            <ThemeToggle />
+
             {/* Mobile Menu Button */}
             <motion.button
-              className="md:hidden p-3 rounded-xl hover:bg-gray-100 active:bg-gray-200 transition-colors relative z-10"
+              className="md:hidden p-3 rounded-xl hover:bg-gray-100 dark:hover:bg-gray-800 active:bg-gray-200 dark:active:bg-gray-700 transition-colors relative z-10"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -173,7 +177,7 @@ export function Navigation() {
                 className="w-6 h-6 flex flex-col justify-center items-center"
               >
                 <motion.span
-                  className="w-6 h-0.5 bg-gray-700 block rounded-full"
+                  className="w-6 h-0.5 text-gray-900 dark:bg-gray-300 block rounded-full"
                   variants={{
                     closed: { rotate: 0, y: 0 },
                     open: { rotate: 45, y: 6 },
@@ -181,7 +185,7 @@ export function Navigation() {
                   transition={{ duration: 0.3 }}
                 />
                 <motion.span
-                  className="w-6 h-0.5 bg-gray-700 block mt-1.5 rounded-full"
+                  className="w-6 h-0.5 text-gray-900 dark:bg-gray-300 block mt-1.5 rounded-full"
                   variants={{
                     closed: { opacity: 1 },
                     open: { opacity: 0 },
@@ -189,7 +193,7 @@ export function Navigation() {
                   transition={{ duration: 0.3 }}
                 />
                 <motion.span
-                  className="w-6 h-0.5 bg-gray-700 block mt-1.5 rounded-full"
+                  className="w-6 h-0.5 text-gray-900 dark:bg-gray-300 block mt-1.5 rounded-full"
                   variants={{
                     closed: { rotate: 0, y: 0 },
                     open: { rotate: -45, y: -6 },
@@ -215,10 +219,10 @@ export function Navigation() {
                 onClick={() => setIsMobileMenuOpen(false)}
                 style={{ top: 0, zIndex: -1 }}
               />
-              
+
               {/* Mobile Menu Content */}
               <motion.div
-                className="md:hidden absolute left-0 right-0 top-full bg-white/95 backdrop-blur-md border-b border-gray-200/50 shadow-lg"
+                className="md:hidden absolute left-0 right-0 top-full bg-white/95 dark:bg-gray-900/95 backdrop-blur-md border-b border-gray-200/50 dark:border-gray-700/50 shadow-lg"
                 variants={mobileMenuVariants}
                 initial="closed"
                 animate="open"
@@ -238,30 +242,30 @@ export function Navigation() {
                       >
                         <Link
                           href={item.href}
-                          className="block py-3 px-4 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-xl transition-all duration-200 font-medium text-lg group"
+                          className="block py-3 px-4 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-blue-50 dark:hover:bg-gray-800 rounded-xl transition-all duration-200 font-medium text-lg group"
                           onClick={() => setIsMobileMenuOpen(false)}
                         >
                           <div className="flex items-center justify-between">
                             <span>{item.label}</span>
                             <motion.div
-                              className="w-0 group-hover:w-2 h-2 bg-blue-600 rounded-full transition-all duration-200"
+                              className="w-0 group-hover:w-2 h-2 bg-blue-600 dark:bg-blue-400 rounded-full transition-all duration-200"
                               whileHover={{ scale: 1.2 }}
                             />
                           </div>
                         </Link>
                       </motion.div>
                     ))}
-                    
+
                     {/* Mobile CTA Section */}
                     <motion.div
-                      className="pt-4 mt-4 border-t border-gray-200"
+                      className="pt-4 mt-4 border-t border-gray-200 dark:border-gray-700"
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: 0.4, duration: 0.3 }}
                     >
                       <Link
                         href="#contact"
-                        className="block w-full py-3 px-4 bg-blue-600 hover:bg-blue-700 text-white text-center font-semibold rounded-xl transition-colors duration-200"
+                        className="block w-full py-3 px-4 bg-blue-600 hover:bg-blue-700 dark:bg-blue-600 dark:hover:bg-blue-700 text-white text-center font-semibold rounded-xl transition-colors duration-200"
                         onClick={() => setIsMobileMenuOpen(false)}
                       >
                         Get In Touch

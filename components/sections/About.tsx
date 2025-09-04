@@ -40,7 +40,7 @@ export function About() {
   };
 
   return (
-    <section id="about" className="py-20 px-6 bg-gray-50">
+    <section id="about" className="py-20 px-6 bg-gray-50 dark:bg-gray-900">
       <div className="container mx-auto">
         <div className="max-w-6xl mx-auto">
           <motion.div
@@ -51,7 +51,7 @@ export function About() {
             viewport={{ once: true }}
           >
             <motion.h2
-              className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4"
+              className="text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4"
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6 }}
@@ -67,7 +67,7 @@ export function About() {
               viewport={{ once: true }}
             />
             <motion.p
-              className="text-xl text-gray-600 max-w-2xl mx-auto"
+              className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
@@ -87,7 +87,7 @@ export function About() {
           >
             <div className="space-y-6">
               <motion.p
-                className="text-lg text-gray-600 leading-relaxed"
+                className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed"
                 variants={itemVariants}
               >
                 I&apos;m a passionate frontend developer with a love for
@@ -98,7 +98,7 @@ export function About() {
               </motion.p>
 
               <motion.p
-                className="text-lg text-gray-600 leading-relaxed"
+                className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed"
                 variants={itemVariants}
               >
                 As an adaptable and versatile team player, my journey in web
@@ -109,7 +109,7 @@ export function About() {
               </motion.p>
 
               <motion.div className="space-y-4" variants={itemVariants}>
-                <h3 className="text-xl font-semibold text-gray-900">
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
                   What I Do
                 </h3>
                 <div className="grid sm:grid-cols-2 gap-4">
@@ -137,7 +137,7 @@ export function About() {
                         }}
                         viewport={{ once: true }}
                       />
-                      <span className="text-gray-700">{skill}</span>
+                      <span className="text-gray-700 dark:text-gray-300">{skill}</span>
                     </motion.div>
                   ))}
                 </div>
@@ -145,7 +145,7 @@ export function About() {
             </div>
 
             <motion.div
-              className="bg-white rounded-2xl p-8 shadow-xl border border-gray-100"
+              className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-xl border border-gray-100 dark:border-gray-700"
               variants={statsVariants}
               whileHover={{
                 y: -5,
@@ -154,7 +154,7 @@ export function About() {
               transition={{ duration: 0.3 }}
             >
               <motion.h3
-                className="text-2xl font-bold text-gray-900 mb-6"
+                className="text-2xl font-bold text-gray-900 dark:text-white mb-6"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.9 }}
@@ -172,16 +172,16 @@ export function About() {
                   <motion.div
                     key={stat.label}
                     className={`flex justify-between items-center py-3 ${
-                      index < 3 ? "border-b border-gray-200" : ""
+                      index < 3 ? "border-b border-gray-200 dark:border-gray-600" : ""
                     }`}
                     initial={{ opacity: 0, x: 20 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ delay: index * 0.1 + 1.1 }}
                     viewport={{ once: true }}
                   >
-                    <span className="text-gray-600">{stat.label}</span>
+                    <span className="text-gray-600 dark:text-gray-400">{stat.label}</span>
                     <motion.span
-                      className="font-semibold text-gray-900 text-lg"
+                      className="font-semibold text-gray-900 dark:text-white text-lg"
                       initial={{ scale: 0 }}
                       whileInView={{ scale: 1 }}
                       transition={{

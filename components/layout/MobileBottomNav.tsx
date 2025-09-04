@@ -96,6 +96,26 @@ export function MobileBottomNav() {
         ),
       },
       {
+        id: "contact",
+        label: "Contact",
+        href: "#contact",
+        icon: (
+          <svg
+            className="w-full h-full"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+            />
+          </svg>
+        ),
+      },
+      {
         id: "projects",
         label: "Projects",
         href: "#projects",
@@ -168,7 +188,7 @@ export function MobileBottomNav() {
     >
       <div className="relative">
         {/* Glassmorphism Background */}
-        <div className="absolute inset-0 bg-white/20 backdrop-blur-lg rounded-2xl border border-white/30 shadow-2xl" />
+        <div className="absolute inset-0 bg-white/20 dark:bg-gray-900/20 backdrop-blur-lg rounded-2xl border border-white/30 dark:border-gray-700/30 shadow-2xl" />
 
         {/* Navigation Items */}
         <div className="relative flex items-center justify-between px-2 py-1.5 sm:px-3 sm:py-2">
@@ -183,7 +203,7 @@ export function MobileBottomNav() {
                 ${
                   activeSection === item.id
                     ? "text-blue-600"
-                    : "text-gray-600 hover:text-gray-800"
+                    : "text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200"
                 }
               `}
               whileTap={{ scale: 0.95 }}

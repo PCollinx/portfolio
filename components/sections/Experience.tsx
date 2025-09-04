@@ -71,7 +71,7 @@ export function Experience() {
   };
 
   return (
-    <section id="experience" className="py-20 px-6 bg-white">
+    <section id="experience" className="py-20 px-6 bg-white dark:bg-gray-900">
       <div className="container mx-auto">
         <motion.div
           className="text-center mb-16"
@@ -81,7 +81,7 @@ export function Experience() {
           viewport={{ once: true }}
         >
           <motion.h2
-            className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4"
+            className="text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4"
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6 }}
@@ -97,7 +97,7 @@ export function Experience() {
             viewport={{ once: true }}
           />
           <motion.p
-            className="text-xl text-gray-600 max-w-2xl mx-auto"
+            className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -135,7 +135,7 @@ export function Experience() {
               >
                 {/* Timeline Dot */}
                 <motion.div
-                  className="absolute left-6 w-4 h-4 bg-blue-600 rounded-full border-4 border-white shadow-lg z-10"
+                  className="absolute left-6 w-4 h-4 bg-blue-600 rounded-full border-4 border-white dark:border-gray-900 shadow-lg z-10"
                   initial={{ scale: 0 }}
                   whileInView={{ scale: 1 }}
                   transition={{
@@ -149,36 +149,36 @@ export function Experience() {
 
                 {/* Content */}
                 <motion.div
-                  className="ml-20 bg-gray-50 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 w-full border border-gray-100"
+                  className="ml-20 bg-gray-50 dark:bg-gray-800 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 w-full border border-gray-100 dark:border-gray-700"
                   whileHover={{ y: -5 }}
                 >
                   <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-4">
                     <div>
-                      <h3 className="text-xl font-bold text-gray-900 mb-1">
+                      <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-1">
                         {exp.title}
                       </h3>
                       <p className="text-blue-600 font-semibold">
                         {exp.company}
                       </p>
                     </div>
-                    <span className="text-gray-500 font-medium mt-2 lg:mt-0 bg-white px-3 py-1 rounded-full text-sm">
+                    <span className="text-gray-500 dark:text-gray-400 font-medium mt-2 lg:mt-0 bg-white dark:bg-gray-700 px-3 py-1 rounded-full text-sm">
                       {exp.period}
                     </span>
                   </div>
 
-                  <p className="text-gray-600 mb-4 leading-relaxed">
+                  <p className="text-gray-600 dark:text-gray-400 mb-4 leading-relaxed">
                     {exp.description}
                   </p>
 
                   <div className="mb-6">
-                    <h4 className="font-semibold text-gray-900 mb-3">
+                    <h4 className="font-semibold text-gray-900 dark:text-white mb-3">
                       Key Achievements:
                     </h4>
                     <ul className="space-y-2">
                       {exp.achievements.map((achievement, achievementIndex) => (
                         <motion.li
                           key={achievementIndex}
-                          className="flex items-start text-gray-600"
+                          className="flex items-start text-gray-600 dark:text-gray-400"
                           initial={{ opacity: 0, x: -20 }}
                           whileInView={{ opacity: 1, x: 0 }}
                           transition={{

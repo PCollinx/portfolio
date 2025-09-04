@@ -32,7 +32,7 @@ export function Footer() {
   ];
 
   return (
-    <footer className="bg-gray-100 text-gray-900 py-16 px-6 border-t border-gray-200">
+    <footer className="bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white py-16 px-6 border-t border-gray-200 dark:border-gray-700">
       <div className="container mx-auto">
         {/* Social Icons */}
         <div className="flex justify-center mb-12">
@@ -43,7 +43,7 @@ export function Footer() {
                 href={social.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 bg-white rounded-lg flex items-center justify-center text-gray-600 hover:bg-blue-600 hover:text-white transition-all duration-300 transform hover:scale-110 shadow-sm border border-gray-200"
+                className="w-10 h-10 bg-white dark:bg-gray-700 rounded-lg flex items-center justify-center text-gray-600 dark:text-gray-400 hover:bg-blue-600 hover:text-white dark:hover:bg-blue-600 dark:hover:text-white transition-all duration-300 transform hover:scale-110 shadow-sm border border-gray-200 dark:border-gray-600"
                 title={social.name}
               >
                 {social.icon}
@@ -53,21 +53,21 @@ export function Footer() {
         </div>
 
         {/* Bottom Section */}
-        <div className="border-t border-gray-200 pt-8">
+        <div className="border-t border-gray-200 dark:border-gray-700 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-gray-500 text-sm">
+            <p className="text-gray-500 dark:text-gray-400 text-sm">
               © {currentYear} Collins Paul. All rights reserved.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <a
                 href="/privacy"
-                className="text-gray-500 hover:text-blue-600 text-sm transition-colors"
+                className="text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 text-sm transition-colors"
               >
                 Privacy Policy
               </a>
               <a
                 href="/terms"
-                className="text-gray-500 hover:text-blue-600 text-sm transition-colors"
+                className="text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 text-sm transition-colors"
               >
                 Terms of Service
               </a>

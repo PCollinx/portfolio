@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { motion } from "framer-motion";
 import { useToast } from "@/components/ui/ToastProvider";
 
 export function Contact() {
@@ -50,11 +51,24 @@ export function Contact() {
     }
   };
 
+  const handleDownloadCV = () => {
+    // Create a temporary anchor element to trigger download
+    const link = document.createElement("a");
+    link.href = "/cv.pdf";
+    link.download = "Collins_Paul_CV.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+
+    // Show success toast
+    success("CV Download Started", "Your download should begin shortly.");
+  };
+
   const contactInfo = [
     {
       icon: (
         <svg
-          className="w-6 h-6"
+          className="w-5 h-5"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -68,13 +82,12 @@ export function Contact() {
         </svg>
       ),
       title: "Email",
-      value: "paulcollins484@gmail.com",
-      link: "mailto:paulcollins484@gmail.com",
+      value: "collins.developer@gmail.com",
     },
     {
       icon: (
         <svg
-          className="w-6 h-6"
+          className="w-5 h-5"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -88,13 +101,12 @@ export function Contact() {
         </svg>
       ),
       title: "Phone",
-      value: "+234 902 660 3752",
-      link: "tel:+2349026603752",
+      value: "+234 (0) 123 456 7890",
     },
     {
       icon: (
         <svg
-          className="w-6 h-6"
+          className="w-5 h-5"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -114,29 +126,39 @@ export function Contact() {
         </svg>
       ),
       title: "Location",
-      value: "Abuja, Nigeria",
-      link: "#",
+      value: "Lagos, Nigeria",
     },
   ];
 
   return (
-    <section id="contact" className="py-16 px-6 bg-gray-50">
+    <section id="contact" className="py-16 px-6 bg-gray-50 dark:bg-gray-900">
       <div className="container mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
-            Let&apos;s Work Together
+        <motion.div
+          className="text-center mb-12"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+        >
+          <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+            Get In Touch
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto mb-6"></div>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Have a project in mind? I&apos;d love to hear about it. Let&apos;s
-            discuss how we can bring your ideas to life.
+          <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto mb-6" />
+          <p className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+            Let&apos;s discuss your next project or just say hello
           </p>
-        </div>
+        </motion.div>
 
         <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12">
           {/* Contact Form */}
-          <div className="bg-white rounded-2xl p-8 shadow-xl border border-gray-100">
-            <h3 className="text-2xl font-bold text-gray-900 mb-6">
+          <motion.div
+            className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-xl border border-gray-100 dark:border-gray-700"
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
               Send a Message
             </h3>
 
@@ -145,7 +167,7 @@ export function Contact() {
                 <div>
                   <label
                     htmlFor="name"
-                    className="block text-sm font-medium text-gray-700 mb-2"
+                    className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
                   >
                     Name
                   </label>
@@ -156,14 +178,14 @@ export function Contact() {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
                     placeholder="Your name"
                   />
                 </div>
                 <div>
                   <label
                     htmlFor="email"
-                    className="block text-sm font-medium text-gray-700 mb-2"
+                    className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
                   >
                     Email
                   </label>
@@ -174,8 +196,8 @@ export function Contact() {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
-                    placeholder="your@email.com"
+                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+                    placeholder="your.email@example.com"
                   />
                 </div>
               </div>
@@ -183,7 +205,7 @@ export function Contact() {
               <div>
                 <label
                   htmlFor="subject"
-                  className="block text-sm font-medium text-gray-700 mb-2"
+                  className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
                 >
                   Subject
                 </label>
@@ -194,7 +216,7 @@ export function Contact() {
                   value={formData.subject}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
                   placeholder="Project inquiry"
                 />
               </div>
@@ -202,7 +224,7 @@ export function Contact() {
               <div>
                 <label
                   htmlFor="message"
-                  className="block text-sm font-medium text-gray-700 mb-2"
+                  className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
                 >
                   Message
                 </label>
@@ -213,61 +235,119 @@ export function Contact() {
                   onChange={handleChange}
                   required
                   rows={6}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors resize-none"
+                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors resize-none"
                   placeholder="Tell me about your project..."
                 />
               </div>
 
-              <button
+              <motion.button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full bg-blue-600 hover:bg-blue-700 disabled:bg-blue-400 text-white font-semibold py-4 rounded-lg transition-colors duration-300 flex items-center justify-center"
+                className="w-full bg-blue-600 hover:bg-blue-700 disabled:bg-blue-400 text-white font-semibold py-4 px-6 rounded-lg transition-colors duration-300 flex items-center justify-center space-x-2"
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
               >
                 {isSubmitting ? (
-                  <div className="flex items-center">
-                    <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
-                    Sending...
-                  </div>
+                  <>
+                    <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white" />
+                    <span>Sending...</span>
+                  </>
                 ) : (
-                  "Send Message"
+                  <>
+                    <svg
+                      className="w-5 h-5"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"
+                      />
+                    </svg>
+                    <span>Send Message</span>
+                  </>
                 )}
-              </button>
+              </motion.button>
             </form>
-          </div>
+          </motion.div>
 
           {/* Contact Information */}
-          <div className="space-y-8">
-            <div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">
-                Get in Touch
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <div className="mb-8">
+              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
+                Let&apos;s Connect
               </h3>
-              <p className="text-gray-600 mb-8 leading-relaxed">
-                I&apos;m always open to discussing new opportunities,
-                interesting projects, and potential collaborations. Whether you
-                have a question or just want to say hi, I&apos;ll try my best to
-                get back to you!
+              <p className="text-gray-600 dark:text-gray-400 mb-8 leading-relaxed">
+                I&apos;m always interested in new opportunities and exciting
+                projects. Whether you have a question or just want to say hi,
+                feel free to reach out!
               </p>
+
+              <div className="space-y-6">
+                {contactInfo.map((info, index) => (
+                  <motion.div
+                    key={index}
+                    className="flex items-center space-x-4"
+                    initial={{ opacity: 0, x: 20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                  >
+                    <div className="w-12 h-12 bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400 rounded-lg flex items-center justify-center">
+                      {info.icon}
+                    </div>
+                    <div>
+                      <p className="font-semibold text-gray-900 dark:text-white">
+                        {info.title}
+                      </p>
+                      <p className="text-gray-600 dark:text-gray-400">
+                        {info.value}
+                      </p>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
             </div>
 
-            {/* Contact Info Cards */}
-            <div className="space-y-4">
-              {contactInfo.map((info, index) => (
-                <a
-                  key={index}
-                  href={info.link}
-                  className="flex items-center p-4 bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group"
+            {/* Download CV Section */}
+            <div className="mt-8 pt-8 border-t border-gray-200 dark:border-gray-700">
+              <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
+                Download My Resume
+              </h4>
+              <motion.button
+                onClick={handleDownloadCV}
+                className="inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <svg
+                  className="w-5 h-5 mr-2"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
                 >
-                  <div className="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-colors">
-                    {info.icon}
-                  </div>
-                  <div className="ml-4">
-                    <p className="font-semibold text-gray-900">{info.title}</p>
-                    <p className="text-gray-600">{info.value}</p>
-                  </div>
-                </a>
-              ))}
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                  />
+                </svg>
+                Download CV
+              </motion.button>
+              <p className="text-sm text-gray-500 dark:text-gray-400 mt-2">
+                PDF format • Updated September 2025
+              </p>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>
