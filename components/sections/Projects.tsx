@@ -1,6 +1,7 @@
 "use client";
 
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 
 export function Projects() {
   const projects = [
@@ -18,14 +19,14 @@ export function Projects() {
     },
     {
       id: 2,
-      title: "Task Management Dashboard",
+      title: "Crown Clothing",
       description:
-        "A collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features.",
-      image: "/api/placeholder/600/400",
-      tech: ["React", "Socket.io", "Node.js", "PostgreSQL"],
+        "A desktop Clothing shopping app that was designed with react",
+      image: "/crown-clothing.png",
+      tech: ["React", "Redux", "Firebase", "Styled Component"],
       category: "fullstack",
-      github: "https://github.com",
-      demo: "https://demo.com",
+      github: "https://github.com/PCollinx/crown-clothing.git",
+      demo: "https://crown-clothing-khaki.vercel.app/",
       featured: true,
     },
     {
@@ -57,11 +58,11 @@ export function Projects() {
       title: "Portfolio Website",
       description:
         "A modern, responsive portfolio website built with Next.js, featuring smooth animations and optimized performance.",
-      image: "/api/placeholder/600/400",
+      image: "/next.svg",
       tech: ["Next.js", "Framer Motion", "Tailwind CSS"],
       category: "frontend",
-      github: "https://github.com",
-      demo: "https://demo.com",
+      github: "https://github.com/PCollinx/portfolio",
+      demo: "https://portfolio-collins.vercel.app",
       featured: false,
     },
     {
@@ -158,16 +159,34 @@ export function Projects() {
                 }}
               >
                 {/* Project Image */}
-                <div className="relative h-48 bg-gradient-to-br from-blue-400 to-purple-500 overflow-hidden">
-                  <motion.div
-                    className="absolute inset-0 flex items-center justify-center"
-                    whileHover={{ scale: 1.1 }}
-                    transition={{ duration: 0.3 }}
-                  >
-                    <div className="text-white text-6xl font-bold opacity-20">
-                      {project.title.charAt(0)}
-                    </div>
-                  </motion.div>
+                <div className="relative h-48 bg-gray-200 dark:bg-gray-700 overflow-hidden">
+                  {project.image.startsWith('/api/placeholder') ? (
+                    // Fallback for placeholder images
+                    <motion.div
+                      className="absolute inset-0 bg-gradient-to-br from-blue-400 to-purple-500 flex items-center justify-center"
+                      whileHover={{ scale: 1.1 }}
+                      transition={{ duration: 0.3 }}
+                    >
+                      <div className="text-white text-6xl font-bold opacity-20">
+                        {project.title.charAt(0)}
+                      </div>
+                    </motion.div>
+                  ) : (
+                    // Actual project image
+                    <motion.div
+                      className="relative w-full h-full"
+                      whileHover={{ scale: 1.05 }}
+                      transition={{ duration: 0.3 }}
+                    >
+                      <Image
+                        src={project.image}
+                        alt={project.title}
+                        fill
+                        className="object-cover"
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      />
+                    </motion.div>
+                  )}
                   {project.featured && (
                     <motion.div
                       className="absolute top-4 right-4 bg-yellow-400 text-yellow-900 px-3 py-1 rounded-full text-sm font-semibold"

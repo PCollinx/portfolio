@@ -168,9 +168,9 @@ export function Hero() {
   if (!mounted) return null;
 
   return (
-        <section
+    <section
       id="home"
-      className="min-h-screen flex items-center justify-center px-6 pt-20 bg-white dark:bg-gray-900 relative overflow-hidden"
+      className="min-h-screen flex items-center justify-center px-6 pt-20 pb-16 md:pb-8 bg-white dark:bg-gray-900 relative overflow-hidden"
     >
       <div className="container mx-auto">
         <motion.div
