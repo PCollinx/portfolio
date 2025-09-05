@@ -7,14 +7,14 @@ export function Projects() {
   const projects = [
     {
       id: 1,
-      title: "E-Commerce Platform",
+      title: "Nexus Host",
       description:
-        "A full-featured e-commerce platform built with Next.js, featuring user authentication, payment processing, and admin dashboard.",
-      image: "/api/placeholder/600/400",
-      tech: ["Next.js", "TypeScript", "Stripe", "MongoDB"],
-      category: "fullstack",
-      github: "https://github.com",
-      demo: "https://demo.com",
+        "NexusHost is a modern, responsive web hosting platform built with Next.js 15, Tailwind CSS, and Framer Motion.",
+      image: "/nexushost.png",
+      tech: ["Next.js", "Radix UI", "Framer Motion"],
+      category: "frontend",
+      github: "https://github.com/PCollinx/NexusHost.git",
+      demo: "https://nexus-host.vercel.app",
       featured: true,
     },
     {
@@ -160,7 +160,7 @@ export function Projects() {
               >
                 {/* Project Image */}
                 <div className="relative h-48 bg-gray-200 dark:bg-gray-700 overflow-hidden">
-                  {project.image.startsWith('/api/placeholder') ? (
+                  {project.image.startsWith("/api/placeholder") ? (
                     // Fallback for placeholder images
                     <motion.div
                       className="absolute inset-0 bg-gradient-to-br from-blue-400 to-purple-500 flex items-center justify-center"
