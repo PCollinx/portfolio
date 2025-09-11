@@ -7,6 +7,18 @@ export function Projects() {
   const projects = [
     {
       id: 1,
+      title: "Weather App",
+      description:
+        "A modern weather application built with Next.js, featuring detailed weather information and a clean, responsive UI.",
+      image: "/weather.png",
+      tech: ["NextJS", "Weather API", "Typescript", "Tailwind"],
+      category: "frontend",
+      github: "https://github.com/PCollinx/weather",
+      demo: "https://weather-mu-green.vercel.app/",
+      featured: true,
+    },
+    {
+      id: 2,
       title: "Nexus Host",
       description:
         "NexusHost is a modern, responsive web hosting platform built with Next.js 15, Tailwind CSS, and Framer Motion.",
@@ -18,7 +30,7 @@ export function Projects() {
       featured: true,
     },
     {
-      id: 2,
+      id: 3,
       title: "Crown Clothing",
       description:
         "A desktop Clothing shopping app that was designed with react",
@@ -27,20 +39,9 @@ export function Projects() {
       category: "fullstack",
       github: "https://github.com/PCollinx/crown-clothing.git",
       demo: "https://crown-clothing-khaki.vercel.app/",
-      featured: true,
-    },
-    {
-      id: 3,
-      title: "Weather App",
-      description:
-        "A beautiful weather application with location-based forecasts, interactive maps, and detailed weather analytics.",
-      image: "/api/placeholder/600/400",
-      tech: ["React", "Weather API", "Chart.js", "Tailwind"],
-      category: "frontend",
-      github: "https://github.com",
-      demo: "https://demo.com",
       featured: false,
     },
+
     {
       id: 4,
       title: "Fitness Tracker",
