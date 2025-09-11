@@ -156,7 +156,7 @@ export function Skills() {
             Skills & Technologies
           </motion.h2>
           <motion.div
-            className="w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto mb-6"
+            className="w-24 h-1 bg-gradient-to-r from-[#273F4F] to-[#FE7743] mx-auto mb-6"
             initial={{ width: 0 }}
             whileInView={{ width: 96 }}
             transition={{ duration: 0.8, delay: 0.3 }}
@@ -235,7 +235,7 @@ export function Skills() {
                     </div>
                     <div className="w-full bg-gray-200 rounded-full h-2 overflow-hidden">
                       <motion.div
-                        className="bg-gradient-to-r from-blue-500 to-purple-600 h-2 rounded-full"
+                        className="bg-gradient-to-r from-[#273F4F] to-[#FE7743] h-2 rounded-full"
                         variants={skillBarVariants}
                         initial="hidden"
                         whileInView="visible"
@@ -275,10 +275,10 @@ export function Skills() {
                     key={tech}
                     className={`px-2 sm:px-3 py-1 rounded-full text-xs sm:text-sm font-medium ${
                       index === 0
-                        ? "bg-blue-100 text-blue-800"
+                        ? "bg-[#D7D7D7] text-[#273F4F]"
                         : index === 1
                         ? "bg-green-100 text-green-800"
-                        : "bg-purple-100 text-purple-800"
+                        : "bg-[#447D9B]/20 text-[#447D9B]"
                     }`}
                     initial={{ scale: 0, opacity: 0 }}
                     whileInView={{ scale: 1, opacity: 1 }}

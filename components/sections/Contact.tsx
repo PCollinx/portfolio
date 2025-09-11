@@ -143,7 +143,7 @@ export function Contact() {
           <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4">
             Get In Touch
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto mb-6" />
+          <div className="w-24 h-1 bg-gradient-to-r from-[#273F4F] to-[#FE7743] mx-auto mb-6" />
           <p className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
             Let&apos;s discuss your next project or just say hello
           </p>
@@ -178,7 +178,7 @@ export function Contact() {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white rounded-lg focus:ring-2 focus:ring-[#447D9B] focus:border-transparent transition-colors"
                     placeholder="Your name"
                   />
                 </div>
@@ -196,7 +196,7 @@ export function Contact() {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white rounded-lg focus:ring-2 focus:ring-[#447D9B] focus:border-transparent transition-colors"
                     placeholder="your.email@example.com"
                   />
                 </div>
@@ -216,7 +216,7 @@ export function Contact() {
                   value={formData.subject}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white rounded-lg focus:ring-2 focus:ring-[#447D9B] focus:border-transparent transition-colors"
                   placeholder="Project inquiry"
                 />
               </div>
@@ -235,7 +235,7 @@ export function Contact() {
                   onChange={handleChange}
                   required
                   rows={6}
-                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors resize-none"
+                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white rounded-lg focus:ring-2 focus:ring-[#447D9B] focus:border-transparent transition-colors resize-none"
                   placeholder="Tell me about your project..."
                 />
               </div>
@@ -243,7 +243,7 @@ export function Contact() {
               <motion.button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full bg-blue-600 hover:bg-blue-700 disabled:bg-blue-400 text-white font-semibold py-4 px-6 rounded-lg transition-colors duration-300 flex items-center justify-center space-x-2"
+                className="w-full bg-[#447D9B] hover:bg-[#273F4F] disabled:bg-[#447D9B]/70 text-white font-semibold py-4 px-6 rounded-lg transition-colors duration-300 flex items-center justify-center space-x-2"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
               >
@@ -301,7 +301,7 @@ export function Contact() {
                     transition={{ duration: 0.6, delay: index * 0.1 }}
                     viewport={{ once: true }}
                   >
-                    <div className="w-12 h-12 bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400 rounded-lg flex items-center justify-center">
+                    <div className="w-12 h-12 bg-[#D7D7D7] dark:bg-[#447D9B] text-[#273F4F] dark:text-white rounded-lg flex items-center justify-center">
                       {info.icon}
                     </div>
                     <div>
@@ -324,7 +324,7 @@ export function Contact() {
               </h4>
               <motion.button
                 onClick={handleDownloadCV}
-                className="inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
+                className="inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-[#273F4F] to-[#FE7743] hover:from-[#273F4F] hover:to-[#FE7743]/80 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >

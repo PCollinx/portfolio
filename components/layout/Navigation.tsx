@@ -125,7 +125,7 @@ export function Navigation() {
           <motion.div variants={logoVariants} whileHover="hover">
             <Link
               href="#home"
-              className="text-2xl font-bold text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+              className="text-2xl font-bold text-gray-900 dark:text-white hover:text-[#447D9B] dark:hover:text-[#FE7743] transition-colors"
             >
               Collins
             </Link>
@@ -150,7 +150,7 @@ export function Navigation() {
               >
                 <Link
                   href={item.href}
-                  className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-medium relative group"
+                  className="text-gray-700 dark:text-gray-300 hover:text-[#447D9B] dark:hover:text-[#FE7743] transition-colors font-medium relative group"
                 >
                   {item.label}
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 dark:bg-blue-400 transition-all duration-300 group-hover:w-full"></span>
@@ -242,7 +242,7 @@ export function Navigation() {
                       >
                         <Link
                           href={item.href}
-                          className="block py-3 px-4 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-blue-50 dark:hover:bg-gray-800 rounded-xl transition-all duration-200 font-medium text-lg group"
+                          className="block py-3 px-4 text-gray-700 dark:text-gray-300 hover:text-[#447D9B] dark:hover:text-[#FE7743] hover:bg-[#D7D7D7]/30 dark:hover:bg-gray-800 rounded-xl transition-all duration-200 font-medium text-lg group"
                           onClick={() => setIsMobileMenuOpen(false)}
                         >
                           <div className="flex items-center justify-between">

@@ -90,7 +90,7 @@ export function Experience() {
             Experience & Journey
           </motion.h2>
           <motion.div
-            className="w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto mb-6"
+            className="w-24 h-1 bg-gradient-to-r from-[#273F4F] to-[#FE7743] mx-auto mb-6"
             initial={{ width: 0 }}
             whileInView={{ width: 96 }}
             transition={{ duration: 0.8, delay: 0.3 }}
@@ -118,7 +118,7 @@ export function Experience() {
           >
             {/* Timeline Line */}
             <motion.div
-              className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-blue-600 to-purple-600"
+              className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-[#273F4F] to-[#FE7743]"
               initial={{ height: 0 }}
               whileInView={{ height: "100%" }}
               transition={{ duration: 1.5, delay: 0.5 }}
@@ -135,7 +135,7 @@ export function Experience() {
               >
                 {/* Timeline Dot */}
                 <motion.div
-                  className="absolute left-6 w-4 h-4 bg-blue-600 rounded-full border-4 border-white dark:border-gray-900 shadow-lg z-10"
+                  className="absolute left-6 w-4 h-4 bg-[#447D9B] rounded-full border-4 border-white dark:border-gray-900 shadow-lg z-10"
                   initial={{ scale: 0 }}
                   whileInView={{ scale: 1 }}
                   transition={{
@@ -157,7 +157,7 @@ export function Experience() {
                       <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-1">
                         {exp.title}
                       </h3>
-                      <p className="text-blue-600 font-semibold">
+                      <p className="text-[#447D9B] font-semibold">
                         {exp.company}
                       </p>
                     </div>
@@ -187,7 +187,7 @@ export function Experience() {
                           }}
                           viewport={{ once: true }}
                         >
-                          <span className="text-blue-600 mr-3 mt-1.5 w-2 h-2 rounded-full bg-blue-600 flex-shrink-0" />
+                          <span className="text-[#447D9B] mr-3 mt-1.5 w-2 h-2 rounded-full bg-[#447D9B] flex-shrink-0" />
                           {achievement}
                         </motion.li>
                       ))}
@@ -198,7 +198,7 @@ export function Experience() {
                     {exp.tech.map((tech, techIndex) => (
                       <motion.span
                         key={tech}
-                        className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium"
+                        className="px-3 py-1 bg-[#D7D7D7] text-[#273F4F] rounded-full text-sm font-medium"
                         initial={{ scale: 0 }}
                         whileInView={{ scale: 1 }}
                         transition={{

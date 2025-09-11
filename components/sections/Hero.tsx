@@ -187,7 +187,7 @@ export function Hero() {
               >
                 Hi, I&apos;m{" "}
                 <motion.span
-                  className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"
+                  className="bg-gradient-to-r from-[#447D9B] to-[#FE7743] bg-clip-text text-transparent"
                   animate={{
                     backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"],
                   }}
@@ -231,7 +231,7 @@ export function Hero() {
             >
               <motion.a
                 href="#projects"
-                className="inline-flex items-center justify-center px-8 py-4 bg-blue-600 hover:bg-blue-700 dark:bg-blue-600 dark:hover:bg-blue-700 text-white font-semibold rounded-lg transition-all duration-300 shadow-lg"
+                className="inline-flex items-center justify-center px-8 py-4 bg-[#273F4F] hover:bg-[#447D9B] dark:bg-[#273F4F] dark:hover:bg-[#447D9B] text-white font-semibold rounded-lg transition-all duration-300 shadow-lg"
                 variants={buttonVariants}
                 whileHover="hover"
                 whileTap="tap"
@@ -256,7 +256,7 @@ export function Hero() {
 
               <motion.a
                 href="#contact"
-                className="inline-flex items-center justify-center px-8 py-4 border-2 border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 font-semibold rounded-lg hover:border-blue-600 dark:hover:border-blue-400 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-300"
+                className="inline-flex items-center justify-center px-8 py-4 border-2 border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 font-semibold rounded-lg hover:border-[#FE7743] dark:hover:border-[#FE7743] hover:text-[#FE7743] dark:hover:text-[#FE7743] transition-all duration-300"
                 variants={buttonVariants}
                 whileHover={{
                   scale: 1.05,
@@ -292,7 +292,7 @@ export function Hero() {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                  className="text-gray-600 dark:text-gray-400 hover:text-[#FE7743] dark:hover:text-[#FE7743] transition-colors"
                   whileHover={{ scale: 1.2, y: -2 }}
                   whileTap={{ scale: 0.9 }}
                 >
@@ -311,7 +311,7 @@ export function Hero() {
           <div className="lg:text-right">
             <div className="relative inline-block">
               <motion.div
-                className="w-80 h-80 mx-auto lg:mx-0 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 p-2"
+                className="w-80 h-80 mx-auto lg:mx-0 rounded-full bg-gradient-to-br from-[#273F4F] to-[#447D9B] p-2"
                 variants={avatarVariants}
                 initial="hidden"
                 animate="visible"
@@ -330,7 +330,7 @@ export function Hero() {
                 </div>
               </motion.div>
               <motion.div
-                className="absolute -bottom-4 -right-4 w-20 h-20 bg-blue-600 dark:bg-blue-600 rounded-full flex items-center justify-center shadow-lg"
+                className="absolute -bottom-4 -right-4 w-20 h-20 bg-[#FE7743] dark:bg-[#FE7743] rounded-full flex items-center justify-center shadow-lg"
                 variants={floatingIconVariants}
                 animate="animate"
                 whileHover={{ scale: 1.1 }}

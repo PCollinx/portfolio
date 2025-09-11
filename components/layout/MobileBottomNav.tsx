@@ -202,7 +202,7 @@ export function MobileBottomNav() {
                 transition-all duration-300 flex-1 max-w-[60px] sm:max-w-none
                 ${
                   activeSection === item.id
-                    ? "text-blue-600"
+                    ? "text-[#FE7743]"
                     : "text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200"
                 }
               `}
@@ -215,7 +215,7 @@ export function MobileBottomNav() {
               {activeSection === item.id && (
                 <motion.div
                   layoutId="activeIndicator"
-                  className="absolute inset-0 bg-blue-100/80 rounded-lg sm:rounded-xl border border-blue-200/50"
+                  className="absolute inset-0 bg-[#D7D7D7]/80 rounded-lg sm:rounded-xl border border-[#D7D7D7]"
                   initial={false}
                   transition={{
                     type: "spring",
@@ -252,7 +252,7 @@ export function MobileBottomNav() {
 
               {/* Ripple Effect */}
               <motion.div
-                className="absolute inset-0 rounded-lg sm:rounded-xl bg-blue-400/20"
+                className="absolute inset-0 rounded-lg sm:rounded-xl bg-[#447D9B]/20"
                 initial={{ scale: 0, opacity: 0 }}
                 whileTap={{ scale: 1.5, opacity: 1 }}
                 transition={{ duration: 0.2 }}
@@ -262,7 +262,7 @@ export function MobileBottomNav() {
         </div>
 
         {/* Bottom Glow Effect */}
-        <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-32 h-4 bg-blue-400/20 blur-xl rounded-full" />
+        <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-32 h-4 bg-[#447D9B]/20 blur-xl rounded-full" />
       </div>
     </motion.nav>
   );

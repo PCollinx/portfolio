@@ -9,7 +9,7 @@ export function ThemeToggle() {
   // Don't render until mounted to avoid hydration mismatch
   if (!mounted) {
     return (
-      <div className="relative p-3 rounded-full bg-gray-100 dark:bg-gray-800">
+      <div className="relative p-3 rounded-full bg-[#D7D7D7] dark:bg-[#447D9B]">
         <div className="w-6 h-6" />
       </div>
     );
@@ -18,7 +18,7 @@ export function ThemeToggle() {
   return (
     <motion.button
       onClick={toggleTheme}
-      className="relative p-3 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors duration-300"
+      className="relative p-3 rounded-full bg-[#D7D7D7] hover:bg-[#D7D7D7]/80 dark:bg-[#447D9B] dark:hover:bg-[#447D9B]/80 transition-colors duration-300"
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
       aria-label="Toggle theme"
@@ -31,7 +31,7 @@ export function ThemeToggle() {
       >
         {/* Sun Icon */}
         <motion.svg
-          className="absolute inset-0 w-6 h-6 text-yellow-500"
+          className="absolute inset-0 w-6 h-6 text-[#FE7743]"
           fill="currentColor"
           viewBox="0 0 24 24"
           initial={false}

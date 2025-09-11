@@ -43,7 +43,7 @@ export function Footer() {
                 href={social.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 bg-white dark:bg-gray-700 rounded-lg flex items-center justify-center text-gray-600 dark:text-gray-400 hover:bg-blue-600 hover:text-white dark:hover:bg-blue-600 dark:hover:text-white transition-all duration-300 transform hover:scale-110 shadow-sm border border-gray-200 dark:border-gray-600"
+                className="w-10 h-10 bg-white dark:bg-gray-700 rounded-lg flex items-center justify-center text-gray-600 dark:text-gray-400 hover:bg-[#447D9B] hover:text-white dark:hover:bg-[#FE7743] dark:hover:text-white transition-all duration-300 transform hover:scale-110 shadow-sm border border-gray-200 dark:border-gray-600"
                 title={social.name}
               >
                 {social.icon}
@@ -61,13 +61,13 @@ export function Footer() {
             <div className="flex space-x-6 mt-4 md:mt-0">
               <a
                 href="/privacy"
-                className="text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 text-sm transition-colors"
+                className="text-gray-500 dark:text-gray-400 hover:text-[#447D9B] dark:hover:text-[#FE7743] text-sm transition-colors"
               >
                 Privacy Policy
               </a>
               <a
                 href="/terms"
-                className="text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 text-sm transition-colors"
+                className="text-gray-500 dark:text-gray-400 hover:text-[#447D9B] dark:hover:text-[#FE7743] text-sm transition-colors"
               >
                 Terms of Service
               </a>

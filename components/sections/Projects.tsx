@@ -11,7 +11,7 @@ export function Projects() {
       description:
         "A modern weather application built with Next.js, featuring detailed weather information and a clean, responsive UI.",
       image: "/weather.png",
-      tech: ["NextJS", "Weather API", "Typescript", "Tailwind"],
+      tech: ["NextJS", "OpenWeather API", "Typescript", "Tailwind"],
       category: "frontend",
       github: "https://github.com/PCollinx/weather",
       demo: "https://weather-mu-green.vercel.app/",
@@ -106,7 +106,7 @@ export function Projects() {
   };
 
   return (
-    <section id="projects" className="py-20 px-6 bg-gray-50 dark:bg-gray-900">
+    <section id="projects" className="py-20 px-6 bg-white dark:bg-[#273F4F]">
       <div className="container mx-auto">
         <motion.div
           className="text-center mb-16"
@@ -125,7 +125,7 @@ export function Projects() {
             Featured Projects
           </motion.h2>
           <motion.div
-            className="w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto mb-6"
+            className="w-24 h-1 bg-gradient-to-r from-[#447D9B] to-[#FE7743] mx-auto mb-6"
             initial={{ width: 0 }}
             whileInView={{ width: 96 }}
             transition={{ duration: 0.8, delay: 0.3 }}
@@ -148,7 +148,7 @@ export function Projects() {
             {projects.map((project, index) => (
               <motion.div
                 key={project.id}
-                className="group bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300"
+                className="group bg-white dark:bg-[#447D9B] rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300"
                 variants={projectVariants}
                 initial="hidden"
                 animate="visible"
@@ -164,7 +164,7 @@ export function Projects() {
                   {project.image.startsWith("/api/placeholder") ? (
                     // Fallback for placeholder images
                     <motion.div
-                      className="absolute inset-0 bg-gradient-to-br from-blue-400 to-purple-500 flex items-center justify-center"
+                      className="absolute inset-0 bg-gradient-to-br from-[#273F4F] to-[#447D9B] flex items-center justify-center"
                       whileHover={{ scale: 1.1 }}
                       transition={{ duration: 0.3 }}
                     >
@@ -190,7 +190,7 @@ export function Projects() {
                   )}
                   {project.featured && (
                     <motion.div
-                      className="absolute top-4 right-4 bg-yellow-400 text-yellow-900 px-3 py-1 rounded-full text-sm font-semibold"
+                      className="absolute top-4 right-4 bg-[#FE7743] text-white px-3 py-1 rounded-full text-sm font-semibold"
                       initial={{ scale: 0, rotate: -180 }}
                       animate={{ scale: 1, rotate: 0 }}
                       transition={{ delay: 0.5, type: "spring" }}
@@ -230,7 +230,7 @@ export function Projects() {
                     {project.tech.map((tech, techIndex) => (
                       <motion.span
                         key={tech}
-                        className="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-full text-sm font-medium"
+                        className="px-3 py-1 bg-[#D7D7D7] dark:bg-[#273F4F] text-[#273F4F] dark:text-[#D7D7D7] rounded-full text-sm font-medium"
                         initial={{ scale: 0 }}
                         animate={{ scale: 1 }}
                         transition={{
@@ -255,7 +255,7 @@ export function Projects() {
                       href={project.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center space-x-2 text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                      className="flex items-center space-x-2 text-gray-600 dark:text-gray-400 hover:text-[#FE7743] dark:hover:text-[#FE7743] transition-colors"
                       whileHover={{ scale: 1.05, x: 5 }}
                       whileTap={{ scale: 0.95 }}
                     >
@@ -272,7 +272,7 @@ export function Projects() {
                       href={project.demo}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center space-x-2 text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                      className="flex items-center space-x-2 text-gray-600 dark:text-gray-400 hover:text-[#FE7743] dark:hover:text-[#FE7743] transition-colors"
                       whileHover={{ scale: 1.05, x: 5 }}
                       whileTap={{ scale: 0.95 }}
                     >
@@ -319,7 +319,7 @@ export function Projects() {
             href="https://github.com/PCollinx"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center px-8 py-4 bg-gray-900 text-white font-semibold rounded-lg hover:bg-gray-800 transition-colors"
+            className="inline-flex items-center px-8 py-4 bg-[#273F4F] text-white font-semibold rounded-lg hover:bg-[#447D9B] transition-colors"
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.9 }}

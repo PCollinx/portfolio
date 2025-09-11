@@ -60,7 +60,7 @@ export function About() {
               About Me
             </motion.h2>
             <motion.div
-              className="w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto mb-6"
+              className="w-24 h-1 bg-gradient-to-r from-[#273F4F] to-[#FE7743] mx-auto mb-6"
               initial={{ width: 0 }}
               whileInView={{ width: 96 }}
               transition={{ duration: 0.8, delay: 0.3 }}
@@ -128,7 +128,7 @@ export function About() {
                       viewport={{ once: true }}
                     >
                       <motion.div
-                        className="w-2 h-2 bg-blue-600 rounded-full"
+                        className="w-2 h-2 bg-[#447D9B] rounded-full"
                         initial={{ scale: 0 }}
                         whileInView={{ scale: 1 }}
                         transition={{

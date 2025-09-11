@@ -3,18 +3,20 @@
 /* Simple theme system - same logic everywhere */
 :root {
   --bg-primary: #ffffff;
-  --bg-secondary: #f8fafc;
-  --text-primary: #0f172a;
-  --text-secondary: #64748b;
-  --border-primary: #e2e8f0;
+  --bg-secondary: #D7D7D7;
+  --text-primary: #273F4F;
+  --text-secondary: #447D9B;
+  --accent-primary: #FE7743;
+  --border-primary: #D7D7D7;
 }
 
 .dark {
-  --bg-primary: #0f172a;
-  --bg-secondary: #1e293b;
-  --text-primary: #f8fafc;
-  --text-secondary: #94a3b8;
-  --border-primary: #475569;
+  --bg-primary: #273F4F;
+  --bg-secondary: #447D9B;
+  --text-primary: #D7D7D7;
+  --text-secondary: #ffffff;
+  --accent-primary: #FE7743;
+  --border-primary: #447D9B;
 }
 
 /* Apply theme consistently everywhere */
@@ -60,6 +62,11 @@ nav, nav *, nav a, nav button, nav span, nav div {
 /* Button gradients stay white, but exclude text gradients */
 button.bg-gradient-to-r, a.bg-gradient-to-r {
   color: white !important;
+}
+
+/* Accent color hovers */
+.hover\:text-blue-600:hover, .hover\:text-blue-400:hover {
+  color: var(--accent-primary) !important;
 }
 
 .bg-blue-600 *, .bg-blue-700 * {
