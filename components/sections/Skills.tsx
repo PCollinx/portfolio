@@ -29,17 +29,17 @@ export function Skills() {
         { name: "CSS Modules", level: 85, icon: "📦" },
       ],
     },
-    {
-      title: "Backend & Tools",
-      skills: [
-        { name: "Node.js", level: 82, icon: "🟢" },
-        { name: "Express.js", level: 78, icon: "🚂" },
-        { name: "MongoDB", level: 75, icon: "🍃" },
-        { name: "PostgreSQL", level: 70, icon: "🐘" },
-        { name: "Git", level: 90, icon: "📝" },
-        { name: "Docker", level: 65, icon: "🐳" },
-      ],
-    },
+    // {
+    //   title: "Backend & Tools",
+    //   skills: [
+    //     { name: "Node.js", level: 82, icon: "🟢" },
+    //     { name: "Express.js", level: 78, icon: "🚂" },
+    //     { name: "MongoDB", level: 75, icon: "🍃" },
+    //     { name: "PostgreSQL", level: 70, icon: "🐘" },
+    //     { name: "Git", level: 90, icon: "📝" },
+    //     { name: "Docker", level: 65, icon: "🐳" },
+    //   ],
+    // },
     {
       title: "Development Tools",
       skills: [

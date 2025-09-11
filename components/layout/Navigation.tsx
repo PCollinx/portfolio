@@ -111,7 +111,7 @@ export function Navigation() {
 
   return (
     <motion.nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 w-full ${
         isScrolled
           ? "bg-white/80 dark:bg-gray-900/80 backdrop-blur-md border-b border-gray-200/20 dark:border-gray-700/20"
           : "bg-transparent"
@@ -120,8 +120,8 @@ export function Navigation() {
       initial="hidden"
       animate="visible"
     >
-      <div className="container mx-auto px-6 py-4">
-        <div className="flex items-center justify-between">
+      <div className="container mx-auto px-4 sm:px-6 py-4 w-full max-w-[1200px]">
+        <div className="flex items-center justify-between w-full">
           <motion.div variants={logoVariants} whileHover="hover">
             <Link
               href="#home"

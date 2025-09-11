@@ -94,10 +94,13 @@ export function Projects() {
   };
 
   return (
-    <section id="projects" className="py-20 px-6 bg-white dark:bg-[#273F4F]">
-      <div className="container mx-auto">
+    <section
+      id="projects"
+      className="py-16 sm:py-20 px-0 sm:px-4 md:px-6 bg-white dark:bg-[#273F4F] w-full"
+    >
+      <div className="container mx-auto w-full max-w-[1200px]">
         <motion.div
-          className="text-center mb-16"
+          className="text-center mb-12 sm:mb-16"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -131,7 +134,10 @@ export function Projects() {
         </motion.div>
 
         {/* Projects Grid */}
-        <motion.div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8" layout>
+        <motion.div
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8 w-full"
+          layout
+        >
           <AnimatePresence>
             {projects.map((project, index) => (
               <motion.div

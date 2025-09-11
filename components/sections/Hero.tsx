@@ -170,11 +170,11 @@ export function Hero() {
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center justify-center px-6 pt-20 pb-16 md:pb-8 bg-white dark:bg-gray-900 relative overflow-hidden"
+      className="min-h-screen flex items-center justify-center px-0 sm:px-4 md:px-6 pt-20 pb-16 md:pb-8 bg-white dark:bg-gray-900 relative overflow-hidden w-full"
     >
-      <div className="container mx-auto">
+      <div className="container mx-auto w-full max-w-[1200px]">
         <motion.div
-          className="grid lg:grid-cols-2 gap-12 items-center"
+          className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center"
           variants={containerVariants}
           initial="hidden"
           animate="visible"
@@ -311,7 +311,7 @@ export function Hero() {
           <div className="lg:text-right">
             <div className="relative inline-block">
               <motion.div
-                className="w-80 h-80 mx-auto lg:mx-0 rounded-full bg-gradient-to-br from-[#273F4F] to-[#447D9B] p-2"
+                className="w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 mx-auto lg:mx-0 rounded-full bg-gradient-to-br from-[#273F4F] to-[#447D9B] p-2"
                 variants={avatarVariants}
                 initial="hidden"
                 animate="visible"

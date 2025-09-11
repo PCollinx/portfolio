@@ -191,15 +191,15 @@ export function MobileBottomNav() {
         <div className="absolute inset-0 bg-white/20 dark:bg-gray-900/20 backdrop-blur-lg rounded-2xl border border-white/30 dark:border-gray-700/30 shadow-2xl" />
 
         {/* Navigation Items */}
-        <div className="relative flex items-center justify-between px-2 py-1.5 sm:px-3 sm:py-2">
+        <div className="relative flex items-center justify-between px-1 py-1 sm:px-3 sm:py-2">
           {navItems.map((item, index) => (
             <motion.button
               key={item.id}
               onClick={() => handleNavClick(item.href, item.id)}
               className={`
                 relative flex flex-col items-center justify-center
-                w-12 h-12 sm:w-14 sm:h-14 rounded-lg sm:rounded-xl 
-                transition-all duration-300 flex-1 max-w-[60px] sm:max-w-none
+                w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-lg sm:rounded-xl 
+                transition-all duration-300 flex-1 max-w-[50px] sm:max-w-[60px] md:max-w-none
                 ${
                   activeSection === item.id
                     ? "text-[#FE7743]"
@@ -234,11 +234,11 @@ export function MobileBottomNav() {
                   transition={{ duration: 0.2 }}
                   className="mb-0.5 sm:mb-1"
                 >
-                  <div className="w-5 h-5 sm:w-6 sm:h-6">{item.icon}</div>
+                  <div className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6">{item.icon}</div>
                 </motion.div>
                 <span
                   className={`
-                    text-[10px] sm:text-xs font-medium transition-all duration-200
+                    text-[8px] sm:text-[10px] md:text-xs font-medium transition-all duration-200
                     ${
                       activeSection === item.id
                         ? "opacity-100 scale-100"
