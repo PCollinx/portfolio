@@ -212,12 +212,20 @@ html {
     width: 100%;
     min-width: 320px;
   }
-  
+
   .container {
     width: 100% !important;
     max-width: 100% !important;
     margin: 0 auto !important;
     padding-left: 0.75rem !important;
     padding-right: 0.75rem !important;
+  }
+}
+
+/* Fix for iOS devices with home indicator */
+@supports (padding-bottom: env(safe-area-inset-bottom)) {
+  .fixed[class*="bottom-"] {
+    padding-bottom: env(safe-area-inset-bottom);
+    bottom: calc(env(safe-area-inset-bottom) + 0.5rem) !important;
   }
 }

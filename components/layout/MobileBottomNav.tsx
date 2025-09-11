@@ -184,22 +184,22 @@ export function MobileBottomNav() {
       initial={{ y: 100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
-      className="fixed bottom-2 sm:bottom-4 left-2 right-2 sm:left-1/2 sm:right-auto sm:transform sm:-translate-x-1/2 sm:max-w-sm z-50 md:hidden"
+      className="fixed bottom-3 sm:bottom-5 left-3 right-3 sm:left-1/2 sm:right-auto sm:transform sm:-translate-x-1/2 sm:max-w-sm z-50 md:hidden"
     >
       <div className="relative">
         {/* Glassmorphism Background */}
         <div className="absolute inset-0 bg-white/20 dark:bg-gray-900/20 backdrop-blur-lg rounded-2xl border border-white/30 dark:border-gray-700/30 shadow-2xl" />
 
         {/* Navigation Items */}
-        <div className="relative flex items-center justify-between px-1 py-1 sm:px-3 sm:py-2">
+        <div className="relative flex items-center justify-between px-2 py-2.5 sm:px-4 sm:py-3">
           {navItems.map((item, index) => (
             <motion.button
               key={item.id}
               onClick={() => handleNavClick(item.href, item.id)}
               className={`
                 relative flex flex-col items-center justify-center
-                w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-lg sm:rounded-xl 
-                transition-all duration-300 flex-1 max-w-[50px] sm:max-w-[60px] md:max-w-none
+                w-11 h-12 sm:w-14 sm:h-16 md:w-16 md:h-18 rounded-lg sm:rounded-xl 
+                transition-all duration-300 flex-1 max-w-[55px] sm:max-w-[65px] md:max-w-none
                 ${
                   activeSection === item.id
                     ? "text-[#FE7743]"
@@ -215,7 +215,7 @@ export function MobileBottomNav() {
               {activeSection === item.id && (
                 <motion.div
                   layoutId="activeIndicator"
-                  className="absolute inset-0 bg-[#D7D7D7]/80 rounded-lg sm:rounded-xl border border-[#D7D7D7]"
+                  className="absolute inset-0 bg-[#D7D7D7]/80 rounded-lg sm:rounded-xl border border-[#D7D7D7] shadow-md"
                   initial={false}
                   transition={{
                     type: "spring",
@@ -232,13 +232,13 @@ export function MobileBottomNav() {
                     scale: activeSection === item.id ? 1.1 : 1,
                   }}
                   transition={{ duration: 0.2 }}
-                  className="mb-0.5 sm:mb-1"
+                  className="mb-1 sm:mb-1.5"
                 >
-                  <div className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6">{item.icon}</div>
+                  <div className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7">{item.icon}</div>
                 </motion.div>
                 <span
                   className={`
-                    text-[8px] sm:text-[10px] md:text-xs font-medium transition-all duration-200
+                    text-[9px] sm:text-[11px] md:text-xs font-medium transition-all duration-200
                     ${
                       activeSection === item.id
                         ? "opacity-100 scale-100"
@@ -262,7 +262,7 @@ export function MobileBottomNav() {
         </div>
 
         {/* Bottom Glow Effect */}
-        <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-32 h-4 bg-[#447D9B]/20 blur-xl rounded-full" />
+        <div className="absolute -bottom-3 left-1/2 transform -translate-x-1/2 w-40 h-5 bg-[#447D9B]/30 dark:bg-[#FE7743]/20 blur-xl rounded-full" />
       </div>
     </motion.nav>
   );
