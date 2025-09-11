@@ -56,18 +56,6 @@ export function Projects() {
     },
     {
       id: 5,
-      title: "Portfolio Website",
-      description:
-        "A modern, responsive portfolio website built with Next.js, featuring smooth animations and optimized performance.",
-      image: "/next.svg",
-      tech: ["Next.js", "Framer Motion", "Tailwind CSS"],
-      category: "frontend",
-      github: "https://github.com/PCollinx/portfolio",
-      demo: "https://portfolio-collins.vercel.app",
-      featured: false,
-    },
-    {
-      id: 6,
       title: "Chat Application",
       description:
         "Real-time chat application with group messaging, file sharing, and video calling capabilities.",

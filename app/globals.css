@@ -3,20 +3,20 @@
 /* Simple theme system - same logic everywhere */
 :root {
   --bg-primary: #ffffff;
-  --bg-secondary: #D7D7D7;
-  --text-primary: #273F4F;
-  --text-secondary: #447D9B;
-  --accent-primary: #FE7743;
-  --border-primary: #D7D7D7;
+  --bg-secondary: #d7d7d7;
+  --text-primary: #273f4f;
+  --text-secondary: #447d9b;
+  --accent-primary: #fe7743;
+  --border-primary: #d7d7d7;
 }
 
 .dark {
-  --bg-primary: #273F4F;
-  --bg-secondary: #447D9B;
-  --text-primary: #D7D7D7;
+  --bg-primary: #273f4f;
+  --bg-secondary: #447d9b;
+  --text-primary: #d7d7d7;
   --text-secondary: #ffffff;
-  --accent-primary: #FE7743;
-  --border-primary: #447D9B;
+  --accent-primary: #fe7743;
+  --border-primary: #447d9b;
 }
 
 /* Apply theme consistently everywhere */
@@ -26,60 +26,79 @@ body {
 }
 
 /* All text follows theme - exclude gradient text */
-.text-gray-700:not(.text-transparent), .text-gray-900:not(.text-transparent), .text-gray-300:not(.text-transparent) {
+.text-gray-700:not(.text-transparent),
+.text-gray-900:not(.text-transparent),
+.text-gray-300:not(.text-transparent) {
   color: var(--text-primary) !important;
 }
 
-.text-gray-600:not(.text-transparent), .text-gray-500:not(.text-transparent), .text-gray-400:not(.text-transparent) {
+.text-gray-600:not(.text-transparent),
+.text-gray-500:not(.text-transparent),
+.text-gray-400:not(.text-transparent) {
   color: var(--text-secondary) !important;
 }
 
 /* Navigation - comprehensive fix for all elements */
-nav, nav *, nav a, nav button, nav span, nav div {
+nav,
+nav *,
+nav a,
+nav button,
+nav span,
+nav div {
   color: var(--text-primary) !important;
 }
 
 /* All backgrounds follow theme - exclude gradients */
-.bg-white:not([class*="bg-gradient"]), .bg-gray-50:not([class*="bg-gradient"]), .bg-gray-100:not([class*="bg-gradient"]) {
+.bg-white:not([class*="bg-gradient"]),
+.bg-gray-50:not([class*="bg-gradient"]),
+.bg-gray-100:not([class*="bg-gradient"]) {
   background-color: var(--bg-primary) !important;
 }
 
-.bg-gray-800:not([class*="bg-gradient"]), .bg-gray-900:not([class*="bg-gradient"]) {
+.bg-gray-800:not([class*="bg-gradient"]),
+.bg-gray-900:not([class*="bg-gradient"]) {
   background-color: var(--bg-secondary) !important;
 }
 
 /* Navigation backgrounds with transparency */
-[class*="bg-white/"], [class*="bg-gray-900/"] {
+[class*="bg-white/"],
+[class*="bg-gray-900/"] {
   background-color: var(--bg-primary) !important;
   opacity: 0.9;
 }
 
 /* Button text - blue buttons stay white, outline buttons follow theme */
-.bg-blue-600, .bg-blue-700 {
+.bg-blue-600,
+.bg-blue-700 {
   color: white !important;
 }
 
 /* Button gradients stay white, but exclude text gradients */
-button.bg-gradient-to-r, a.bg-gradient-to-r {
+button.bg-gradient-to-r,
+a.bg-gradient-to-r {
   color: white !important;
 }
 
 /* Accent color hovers */
-.hover\:text-blue-600:hover, .hover\:text-blue-400:hover {
+.hover\:text-blue-600:hover,
+.hover\:text-blue-400:hover {
   color: var(--accent-primary) !important;
 }
 
-.bg-blue-600 *, .bg-blue-700 * {
+.bg-blue-600 *,
+.bg-blue-700 * {
   color: white !important;
 }
 
 /* Button gradients children stay white, but exclude text gradients */
-button.bg-gradient-to-r *, a.bg-gradient-to-r * {
+button.bg-gradient-to-r *,
+a.bg-gradient-to-r * {
   color: white !important;
 }
 
 /* Border buttons follow theme */
-.border-gray-300, .border-gray-600 {
+.border-gray-300,
+.border-gray-600 {
   color: var(--text-primary) !important;
   border-color: var(--border-primary) !important;
 }
@@ -103,7 +122,9 @@ nav button span.bg-gray-900 {
 }
 
 /* Form inputs */
-input, textarea, select {
+input,
+textarea,
+select {
   background-color: var(--bg-primary) !important;
   color: var(--text-primary) !important;
   border-color: var(--border-primary) !important;
