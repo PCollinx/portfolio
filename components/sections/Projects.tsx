@@ -50,7 +50,7 @@ export function Projects() {
       image: "/api/placeholder/600/400",
       tech: ["React Native", "Firebase", "Chart.js"],
       category: "mobile",
-      github: "https://github.com",
+      github: "https://github.com/PCollinx/fitness",
       demo: "https://demo.com",
       featured: false,
     },
