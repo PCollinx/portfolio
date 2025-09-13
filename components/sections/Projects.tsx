@@ -46,12 +46,12 @@ export function Projects() {
       id: 4,
       title: "Fitness Tracker",
       description:
-        "A comprehensive fitness tracking application with workout plans, progress tracking, and social features.",
+        "A comprehensive fitness tracking application with workout plans, progress tracking, and social features like music playlists.",
       image: "/api/placeholder/600/400",
-      tech: ["React Native", "Firebase", "Chart.js"],
+      tech: ["React", "Next.js", "Prisma", "Chart.js"],
       category: "mobile",
       github: "https://github.com/PCollinx/fitness",
-      demo: "https://demo.com",
+      demo: "https://fitness-jet-five.vercel.app/",
       featured: false,
     },
     {
