@@ -47,7 +47,7 @@ export function Projects() {
       title: "Fitness Tracker",
       description:
         "A comprehensive fitness tracking application with workout plans, progress tracking, and social features like music playlists.",
-      image: "/api/placeholder/600/400",
+      image: "/fitness.png",
       tech: ["React", "Next.js", "Prisma", "Chart.js"],
       category: "mobile",
       github: "https://github.com/PCollinx/fitness",
