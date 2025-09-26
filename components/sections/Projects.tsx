@@ -37,8 +37,8 @@ export function Projects() {
       image: "/crown-clothing.png",
       tech: ["React", "Redux", "Firebase", "Styled Component"],
       category: "fullstack",
-      github: "https://github.com/PCollinx/crown-clothing.git",
-      demo: "https://crown-clothing-khaki.vercel.app/",
+      github: "https://github.com/PCollinx/crown-clothing-v2.git",
+      demo: "https://crownclothing-2.netlify.app/",
       featured: false,
     },
 
