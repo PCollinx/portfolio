@@ -7,6 +7,18 @@ export function Projects() {
   const projects = [
     {
       id: 1,
+      title: "Fitness Tracker",
+      description:
+        "A comprehensive fitness tracking application with workout plans, progress tracking, and social features like music playlists.",
+      image: "/fitness.png",
+      tech: ["React", "Next.js", "Prisma", "Chart.js"],
+      category: "mobile",
+      github: "https://github.com/PCollinx/fitness",
+      demo: "https://fitness-jet-five.vercel.app/",
+      featured: false,
+    },
+    {
+      id: 2,
       title: "Weather App",
       description:
         "A modern weather application built with Next.js, featuring detailed weather information and a clean, responsive UI.",
@@ -18,7 +30,7 @@ export function Projects() {
       featured: true,
     },
     {
-      id: 2,
+      id: 3,
       title: "Nexus Host",
       description:
         "NexusHost is a modern, responsive web hosting platform built with Next.js 15, Tailwind CSS, and Framer Motion.",
@@ -30,7 +42,7 @@ export function Projects() {
       featured: true,
     },
     {
-      id: 3,
+      id: 4,
       title: "Crown Clothing",
       description:
         "A desktop Clothing shopping app that was designed with react",
@@ -39,19 +51,6 @@ export function Projects() {
       category: "fullstack",
       github: "https://github.com/PCollinx/crown-clothing-v2.git",
       demo: "https://crownclothing-2.netlify.app/",
-      featured: false,
-    },
-
-    {
-      id: 4,
-      title: "Fitness Tracker",
-      description:
-        "A comprehensive fitness tracking application with workout plans, progress tracking, and social features like music playlists.",
-      image: "/fitness.png",
-      tech: ["React", "Next.js", "Prisma", "Chart.js"],
-      category: "mobile",
-      github: "https://github.com/PCollinx/fitness",
-      demo: "https://fitness-jet-five.vercel.app/",
       featured: false,
     },
     {

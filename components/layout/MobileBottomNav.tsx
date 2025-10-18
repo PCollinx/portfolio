@@ -36,26 +36,6 @@ export function MobileBottomNav() {
         ),
       },
       {
-        id: "about",
-        label: "About",
-        href: "#about",
-        icon: (
-          <svg
-            className="w-full h-full"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
-            />
-          </svg>
-        ),
-      },
-      {
         id: "skills",
         label: "Skills",
         href: "#skills",
@@ -95,26 +75,7 @@ export function MobileBottomNav() {
           </svg>
         ),
       },
-      {
-        id: "contact",
-        label: "Contact",
-        href: "#contact",
-        icon: (
-          <svg
-            className="w-full h-full"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-            />
-          </svg>
-        ),
-      },
+
       {
         id: "projects",
         label: "Projects",
@@ -131,6 +92,26 @@ export function MobileBottomNav() {
               strokeLinejoin="round"
               strokeWidth={2}
               d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"
+            />
+          </svg>
+        ),
+      },
+      {
+        id: "contact",
+        label: "Contact",
+        href: "#contact",
+        icon: (
+          <svg
+            className="w-full h-full"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
             />
           </svg>
         ),
@@ -234,7 +215,9 @@ export function MobileBottomNav() {
                   transition={{ duration: 0.2 }}
                   className="mb-1 sm:mb-1.5"
                 >
-                  <div className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7">{item.icon}</div>
+                  <div className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7">
+                    {item.icon}
+                  </div>
                 </motion.div>
                 <span
                   className={`

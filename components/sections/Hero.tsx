@@ -308,10 +308,10 @@ export function Hero() {
             </motion.div>
           </div>
 
-          <div className="lg:text-right">
+          <div className="flex justify-center lg:justify-end">
             <div className="relative inline-block">
               <motion.div
-                className="w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 mx-auto lg:mx-0 rounded-full bg-gradient-to-br from-[#273F4F] to-[#447D9B] p-2"
+                className="w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 rounded-full bg-gradient-to-br from-[#273F4F] to-[#447D9B] p-2"
                 variants={avatarVariants}
                 initial="hidden"
                 animate="visible"
