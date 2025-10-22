@@ -31,6 +31,18 @@ export function Projects() {
     },
     {
       id: 3,
+      title: "Heart Insights",
+      description:
+        "An AI-powered web application for cardiovascular risk assessment using machine learning. Built with modern web technologies and trained on clinical data from leading medical institutions, this application provides accurate heart disease risk predictions based on validated clinical parameters.",
+      image: "/heart_insights.png",
+      tech: ["Vite", "Tailwind", "Python", "Javascript"],
+      category: "webapp",
+      github: "https://github.com/PCollinx/heart_scan.git",
+      demo: "https://heart-scan.vercel.app/",
+      featured: false,
+    },
+    {
+      id: 4,
       title: "Nexus Host",
       description:
         "NexusHost is a modern, responsive web hosting platform built with Next.js 15, Tailwind CSS, and Framer Motion.",
@@ -42,7 +54,7 @@ export function Projects() {
       featured: true,
     },
     {
-      id: 4,
+      id: 5,
       title: "Crown Clothing",
       description:
         "A desktop Clothing shopping app that was designed with react",
@@ -53,18 +65,18 @@ export function Projects() {
       demo: "https://crownclothing-2.netlify.app/",
       featured: false,
     },
-    {
-      id: 5,
-      title: "Chat Application",
-      description:
-        "Real-time chat application with group messaging, file sharing, and video calling capabilities.",
-      image: "/api/placeholder/600/400",
-      tech: ["React", "Socket.io", "WebRTC", "Express"],
-      category: "fullstack",
-      github: "https://github.com",
-      demo: "https://demo.com",
-      featured: true,
-    },
+    // {
+    //   id: 6,
+    //   title: "Chat Application",
+    //   description:
+    //     "Real-time chat application with group messaging, file sharing, and video calling capabilities.",
+    //   image: "/api/placeholder/600/400",
+    //   tech: ["React", "Socket.io", "WebRTC", "Express"],
+    //   category: "fullstack",
+    //   github: "https://github.com",
+    //   demo: "https://demo.com",
+    //   featured: true,
+    // },
   ];
 
   const projectVariants = {
