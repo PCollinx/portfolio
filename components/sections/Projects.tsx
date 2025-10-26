@@ -15,7 +15,7 @@ export function Projects() {
       category: "mobile",
       github: "https://github.com/PCollinx/fitness",
       demo: "https://fitness-jet-five.vercel.app/",
-      featured: false,
+      featured: true,
     },
     {
       id: 2,
@@ -39,7 +39,7 @@ export function Projects() {
       category: "webapp",
       github: "https://github.com/PCollinx/heart_scan.git",
       demo: "https://heart-scan.vercel.app/",
-      featured: false,
+      featured: true,
     },
     {
       id: 4,
@@ -51,7 +51,7 @@ export function Projects() {
       category: "frontend",
       github: "https://github.com/PCollinx/NexusHost.git",
       demo: "https://nexus-host.vercel.app",
-      featured: true,
+      featured: false,
     },
     {
       id: 5,
@@ -65,18 +65,18 @@ export function Projects() {
       demo: "https://crownclothing-2.netlify.app/",
       featured: false,
     },
-    // {
-    //   id: 6,
-    //   title: "Chat Application",
-    //   description:
-    //     "Real-time chat application with group messaging, file sharing, and video calling capabilities.",
-    //   image: "/api/placeholder/600/400",
-    //   tech: ["React", "Socket.io", "WebRTC", "Express"],
-    //   category: "fullstack",
-    //   github: "https://github.com",
-    //   demo: "https://demo.com",
-    //   featured: true,
-    // },
+    {
+      id: 6,
+      title: "Always Open In New Tab",
+      description:
+        "A Chrome extension that automatically opens all links in new tabs, giving you better control over your browsing experience.",
+      image: "/new_tab.png",
+      tech: ["Javascript "],
+      category: "fullstack",
+      github: "https://github.com/PCollinx/aways_open-in_new_tab.git",
+      // demo: "https://demo.com",
+      featured: true,
+    },
   ];
 
   const projectVariants = {
