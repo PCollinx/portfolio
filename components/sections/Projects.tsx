@@ -42,7 +42,7 @@ export function Projects() {
       featured: true,
     },
     {
-      id: 4,
+      id: 5,
       title: "Nexus Host",
       description:
         "NexusHost is a modern, responsive web hosting platform built with Next.js 15, Tailwind CSS, and Framer Motion.",
@@ -54,7 +54,7 @@ export function Projects() {
       featured: false,
     },
     {
-      id: 5,
+      id: 6,
       title: "Crown Clothing",
       description:
         "A desktop Clothing shopping app that was designed with react",
@@ -66,7 +66,7 @@ export function Projects() {
       featured: false,
     },
     {
-      id: 6,
+      id: 4,
       title: "Always Open In New Tab",
       description:
         "A Chrome extension that automatically opens all links in new tabs, giving you better control over your browsing experience.",
@@ -74,7 +74,7 @@ export function Projects() {
       tech: ["Javascript "],
       category: "fullstack",
       github: "https://github.com/PCollinx/aways_open-in_new_tab.git",
-      // demo: "https://demo.com",
+      demo: "https://chromewebstore.google.com/detail/hcadhlfblcgfmdajgffngegaagegdcla?utm_source=item-share-cb",
       featured: true,
     },
   ];
