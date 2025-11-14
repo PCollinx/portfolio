@@ -82,7 +82,7 @@ export function Contact() {
         </svg>
       ),
       title: "Email",
-      value: "collins.developer@gmail.com",
+      value: "paulcollins484@gmail.com",
     },
     {
       icon: (
@@ -101,7 +101,7 @@ export function Contact() {
         </svg>
       ),
       title: "Phone",
-      value: "+234 (0) 123 456 7890",
+      value: "+234 810 9050 896",
     },
     {
       icon: (
@@ -126,7 +126,7 @@ export function Contact() {
         </svg>
       ),
       title: "Location",
-      value: "Lagos, Nigeria",
+      value: "Abuja, Nigeria",
     },
   ];
 
