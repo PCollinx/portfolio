@@ -19,18 +19,30 @@ export function Projects() {
     },
     {
       id: 2,
-      title: "Weather App",
+      title: "Food Vision",
       description:
-        "A modern weather application built with Next.js, featuring detailed weather information and a clean, responsive UI.",
-      image: "/weather.png",
-      tech: ["NextJS", "OpenWeather API", "Typescript", "Tailwind"],
+        "An AI-powered web application that identifies Nigerian dishes from images and provides detailed nutritional information and cultural history.",
+      image: "/foodvision.png",
+      tech: ["Python", "Next.js", "next-pwa"],
       category: "frontend",
-      github: "https://github.com/PCollinx/weather",
-      demo: "https://weather-mu-green.vercel.app/",
-      featured: true,
+      github: "https://github.com/PCollinx/FoodVision.git",
+      demo: "",
+      featured: false,
     },
     {
       id: 3,
+      title: "Always Open In New Tab",
+      description:
+        "A Chrome extension that automatically opens all links in new tabs, giving you better control over your browsing experience.",
+      image: "/new_tab.png",
+      tech: ["Javascript "],
+      category: "fullstack",
+      github: "https://github.com/PCollinx/aways_open-in_new_tab.git",
+      demo: "https://chromewebstore.google.com/detail/hcadhlfblcgfmdajgffngegaagegdcla?utm_source=item-share-cb",
+      featured: true,
+    },
+    {
+      id: 4,
       title: "Heart Insights",
       description:
         "An AI-powered web application for cardiovascular risk assessment using machine learning. Built with modern web technologies and trained on clinical data from leading medical institutions, this application provides accurate heart disease risk predictions based on validated clinical parameters.",
@@ -43,6 +55,18 @@ export function Projects() {
     },
     {
       id: 5,
+      title: "Weather App",
+      description:
+        "A modern weather application built with Next.js, featuring detailed weather information and a clean, responsive UI.",
+      image: "/weather.png",
+      tech: ["NextJS", "OpenWeather API", "Typescript", "Tailwind"],
+      category: "frontend",
+      github: "https://github.com/PCollinx/weather",
+      demo: "https://weather-mu-green.vercel.app/",
+      featured: true,
+    },
+    {
+      id: 6,
       title: "Nexus Host",
       description:
         "NexusHost is a modern, responsive web hosting platform built with Next.js 15, Tailwind CSS, and Framer Motion.",
@@ -52,30 +76,6 @@ export function Projects() {
       github: "https://github.com/PCollinx/NexusHost.git",
       demo: "https://nexus-host.vercel.app",
       featured: false,
-    },
-    {
-      id: 6,
-      title: "Crown Clothing",
-      description:
-        "A desktop Clothing shopping app that was designed with react",
-      image: "/crown-clothing.png",
-      tech: ["React", "Redux", "Firebase", "Styled Component"],
-      category: "fullstack",
-      github: "https://github.com/PCollinx/crown-clothing-v2.git",
-      demo: "https://crownclothing-2.netlify.app/",
-      featured: false,
-    },
-    {
-      id: 4,
-      title: "Always Open In New Tab",
-      description:
-        "A Chrome extension that automatically opens all links in new tabs, giving you better control over your browsing experience.",
-      image: "/new_tab.png",
-      tech: ["Javascript "],
-      category: "fullstack",
-      github: "https://github.com/PCollinx/aways_open-in_new_tab.git",
-      demo: "https://chromewebstore.google.com/detail/hcadhlfblcgfmdajgffngegaagegdcla?utm_source=item-share-cb",
-      featured: true,
     },
   ];
 
