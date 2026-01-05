@@ -26,8 +26,8 @@ export function Projects() {
       tech: ["Python", "Next.js", "next-pwa"],
       category: "frontend",
       github: "https://github.com/PCollinx/FoodVision.git",
-      demo: "",
-      featured: false,
+      demo: "https://food-vision-75y4.vercel.app",
+      featured: true,
     },
     {
       id: 3,
@@ -43,18 +43,6 @@ export function Projects() {
     },
     {
       id: 4,
-      title: "Heart Insights",
-      description:
-        "An AI-powered web application for cardiovascular risk assessment using machine learning. Built with modern web technologies and trained on clinical data from leading medical institutions, this application provides accurate heart disease risk predictions based on validated clinical parameters.",
-      image: "/heart_insights.png",
-      tech: ["Vite", "Tailwind", "Python", "Javascript"],
-      category: "webapp",
-      github: "https://github.com/PCollinx/heart_scan.git",
-      demo: "https://heart-scan.vercel.app/",
-      featured: true,
-    },
-    {
-      id: 5,
       title: "Weather App",
       description:
         "A modern weather application built with Next.js, featuring detailed weather information and a clean, responsive UI.",
@@ -63,6 +51,18 @@ export function Projects() {
       category: "frontend",
       github: "https://github.com/PCollinx/weather",
       demo: "https://weather-mu-green.vercel.app/",
+      featured: true,
+    },
+    {
+      id: 5,
+      title: "Heart Insights",
+      description:
+        "An AI-powered web application for cardiovascular risk assessment using machine learning. Built with modern web technologies and trained on clinical data from leading medical institutions, this application provides accurate heart disease risk predictions based on validated clinical parameters.",
+      image: "/heart_insights.png",
+      tech: ["Vite", "Tailwind", "Python", "Javascript"],
+      category: "webapp",
+      github: "https://github.com/PCollinx/heart_scan.git",
+      demo: "https://heart-scan.vercel.app/",
       featured: true,
     },
     {
