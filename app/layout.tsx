@@ -1,12 +1,22 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Fraunces, Inter } from "next/font/google";
 import { ToastProvider } from "@/components/ui/ToastProvider";
 import { ThemeProvider } from "@/components/ui/ThemeProvider";
-import { MobileBottomNav } from "@/components/layout/MobileBottomNav";
 import "./globals.css";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
+  subsets: ["latin"],
+});
+
+const fraunces = Fraunces({
+  variable: "--font-fraunces",
+  subsets: ["latin"],
+  weight: ["500", "600"],
+});
+
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
 });
 
@@ -16,9 +26,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Collins - Frontend Developer Portfolio",
+  title: "Collins Paul · Mobile & Frontend Developer",
   description:
-    "Frontend Developer specializing in React, Next.js, and modern web technologies. Building exceptional user experiences with cutting-edge tools.",
+    "Mobile and frontend developer building production apps with React Native, Expo, React and Next.js.",
   keywords:
     "frontend developer, react, nextjs, typescript, portfolio, web development",
   authors: [{ name: "Collins" }],
@@ -80,12 +90,11 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white dark:bg-gray-900 text-gray-900 dark:text-white transition-colors duration-300 w-full`}
+        className={`${geistSans.variable} ${geistMono.variable} ${fraunces.variable} ${inter.variable} font-sans antialiased bg-white dark:bg-gray-900 text-gray-900 dark:text-white transition-colors duration-300 w-full`}
       >
         <ThemeProvider>
           <ToastProvider>
             {children}
-            <MobileBottomNav />
           </ToastProvider>
         </ThemeProvider>
       </body>
