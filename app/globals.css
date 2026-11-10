@@ -1,22 +1,30 @@
 @import "tailwindcss";
 
+/* Class-based dark mode, toggled by ThemeProvider adding .dark to <html> */
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme inline {
+  --font-sans: var(--font-inter), system-ui, sans-serif;
+  --font-display: var(--font-fraunces), Georgia, serif;
+}
+
 /* Simple theme system - same logic everywhere */
 :root {
-  --bg-primary: #ffffff;
-  --bg-secondary: #d7d7d7;
-  --text-primary: #273f4f;
-  --text-secondary: #447d9b;
-  --accent-primary: #fe7743;
-  --border-primary: #d7d7d7;
+  --bg-primary: #f7fbfe;
+  --bg-secondary: #dce8f1;
+  --text-primary: #12263a;
+  --text-secondary: #2e4a61;
+  --accent-primary: #b4461a;
+  --border-primary: #dce8f1;
 }
 
 .dark {
-  --bg-primary: #273f4f;
-  --bg-secondary: #447d9b;
-  --text-primary: #d7d7d7;
-  --text-secondary: #ffffff;
-  --accent-primary: #fe7743;
-  --border-primary: #447d9b;
+  --bg-primary: #0a111d;
+  --bg-secondary: #162236;
+  --text-primary: #e8eef6;
+  --text-secondary: #b7c4d6;
+  --accent-primary: #ff9b6e;
+  --border-primary: #2c3d57;
 }
 
 /* Apply theme consistently everywhere */
@@ -197,7 +205,7 @@ html {
     max-width: 100%;
   }
 
-  section {
+  section:not(.hero) {
     width: 100%;
     padding-left: 1rem !important;
     padding-right: 1rem !important;
@@ -228,4 +236,18 @@ html {
     padding-bottom: env(safe-area-inset-bottom);
     bottom: calc(env(safe-area-inset-bottom) + 0.5rem) !important;
   }
+}
+
+/* Hero sky motion */
+@keyframes sky-drift { from { transform: translateX(0); } to { transform: translateX(120px); } }
+@keyframes sky-drift-back { from { transform: translateX(0); } to { transform: translateX(-90px); } }
+@keyframes sky-twinkle { 0%, 100% { opacity: 0.35; } 50% { opacity: 1; } }
+@keyframes sky-cue { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(6px); } }
+.sky-drift { animation: sky-drift 40s ease-in-out infinite alternate; }
+.sky-drift-back { animation: sky-drift-back 55s ease-in-out infinite alternate; }
+.sky-drift-slow { animation: sky-drift 70s ease-in-out infinite alternate; }
+.sky-twinkle { animation: sky-twinkle 4s ease-in-out infinite; }
+.sky-cue { animation: sky-cue 2s ease-in-out infinite; }
+@media (prefers-reduced-motion: reduce) {
+  .sky-drift, .sky-drift-back, .sky-drift-slow, .sky-twinkle, .sky-cue { animation: none; }
 }
